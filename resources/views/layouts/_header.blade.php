@@ -20,14 +20,15 @@
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Iaosee
+                            {{ Auth::user()->name }}
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="">个人中心</a>
                             <a class="dropdown-item" href="">编辑资料</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="#">
-                                <form method="POST" action="">
+                                <form method="POST" action="{{ route('logout') }}">
+                                    {{ csrf_field() }}
                                     <button class="btn btn-block btn-sm btn-warning">退出</button>
                                 </form>
                             </a>
