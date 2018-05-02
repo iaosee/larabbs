@@ -9,8 +9,8 @@
 
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                    <li class="nav-item active">
-                        <!-- <a class="nav-link" href="{{ url('/') }}">首页 <span class="sr-only">(current)</span></a> -->
+                    <li class="nav-item {{ Request::path() == '/' ? 'active' : '' }}">
+                        <a class="nav-link" href="{{ url('/') }}">首页</a>
                     </li>
                 </ul>
                 @if( Auth::check() )
@@ -36,8 +36,8 @@
                 </ul>
                 @else
                 <form class="form-inline btns">
-                    <a href="" class="btn btn-sm btn-outline-success">登录</a>
-                    <a href="" class="btn btn-sm btn-outline-primary">注册</a>
+                    <a href="{{ route('login') }}" class="btn btn-sm btn-outline-success">登录</a>
+                    <a href="{{ route('register') }}" class="btn btn-sm btn-outline-primary">注册</a>
                 </form>
                 @endif
             </div>

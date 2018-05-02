@@ -1,0 +1,23 @@
+.user-form {
+    padding: 2rem 1.2rem;
+    background-color: #fff;
+    @include shadow-block;
+    .form-group {
+        margin-bottom: 2rem;
+        input {
+            font-size: 14px;
+        }
+    }
+    button.form-submit-button {
+        margin-top: 3rem;
+        margin-bottom: 1rem;
+    }
+}
+
+.page-header {
+    margin-top: .5rem;
+    margin-bottom: 2rem;
+    .page-title {
+        color: $parmary-color;
+    }
+}

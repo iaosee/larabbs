@@ -1,4 +1,32 @@
-@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);/*!
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);/*
+// Body
+$body-bg: #fff;
+
+// Borders
+$laravel-border-color: darken($body-bg, 10%);
+$list-group-border-color: $laravel-border-color;
+
+$card-border-color: $laravel-border-color;
+
+// Brands
+$primary: #3097D1;
+$info: #8eb4cb;
+$success: #2ab27b;
+$warning: #cbb956;
+$danger: #bf5329;
+
+// Typography
+$font-family-sans-serif: "Raleway", sans-serif;
+$font-size-base: .875rem; // 14px
+$line-height-base: 1.6;
+$text-color: #636b6f;
+
+// Inputs
+$input-border-color: lighten($text-color, 40%);
+$input-placeholder-color: lighten($text-color, 30%);
+ */
+
+/*!
  * Bootstrap v4.1.1 (https://getbootstrap.com/)
  * Copyright 2011-2018 The Bootstrap Authors
  * Copyright 2011-2018 Twitter, Inc.
@@ -10416,11 +10444,11 @@ html {
 }
 
 body {
+  font-size: .8rem;
   height: 100%;
   min-height: 100%;
   color: #555;
   background-color: #f5f8fa;
-  font-family: Hiragino Sans GB , "Hiragino Sans GB" , Helvetica , "Microsoft YaHei" , Arial, sans-serif;
 }
 
 .wrap-app {
@@ -10453,6 +10481,7 @@ a.link-normal {
   background-color: #fff;
   -webkit-box-shadow: 0px 1px 10px 2px rgba(42, 42, 42, 0.1);
           box-shadow: 0px 1px 10px 2px rgba(42, 42, 42, 0.1);
+  border-top: 4px solid #00B5AD;
 }
 
 .wrap-header .logo {
@@ -10500,4 +10529,33 @@ a.link-normal {
 /* /footer */
 
 /* ************************************** */
+
+.user-form {
+  padding: 2rem 1.2rem;
+  background-color: #fff;
+  -webkit-box-shadow: 1px 2px 10px #eee;
+          box-shadow: 1px 2px 10px #eee;
+}
+
+.user-form .form-group {
+  margin-bottom: 2rem;
+}
+
+.user-form .form-group input {
+  font-size: 14px;
+}
+
+.user-form button.form-submit-button {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+.page-header {
+  margin-top: .5rem;
+  margin-bottom: 2rem;
+}
+
+.page-header .page-title {
+  color: #00B5AD;
+}
 

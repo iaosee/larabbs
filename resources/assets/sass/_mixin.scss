@@ -1,0 +1,9 @@
+@mixin center-block {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+@mixin shadow-block {
+    box-shadow: 1px 2px 10px #eee;
+}

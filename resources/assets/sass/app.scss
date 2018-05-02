@@ -2,7 +2,8 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
 
 // Variables
-// @import "variables";
+@import "./_variables";
+@import "./_mixin";
 
 // Bootstrap
 @import "~bootstrap/scss/bootstrap";
@@ -11,6 +12,7 @@
 
 // custom
 @import "./global";
+@import "./common";
 @import "./pages/pages";
 
 

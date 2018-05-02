@@ -3,17 +3,13 @@ html {
 }
 
 body {
+    font-size: .8rem;
     height: 100%;
     min-height: 100%;
     color: #555;
-    background-color:rgba(245, 248, 250,1);
-    font-family: Hiragino Sans GB
-               , "Hiragino Sans GB"
-               , Helvetica
-               , "Microsoft YaHei"
-               , Arial, sans-serif;
+    background-color: rgba(245, 248, 250, 1);
+    // font-family: Hiragino Sans GB, "Hiragino Sans GB", Helvetica, "Microsoft YaHei", Arial, sans-serif;
 }
-
 
 .wrap-app {
     height: 100%;
@@ -37,6 +33,7 @@ a.link-normal {
 .wrap-header {
     background-color: #fff;
     box-shadow: 0px 1px 10px 2px rgba(42, 42, 42, 0.1);
+    border-top: 4px solid $parmary-color;
     .logo {
         font-size: 1.4rem;
         font-weight: bold;
