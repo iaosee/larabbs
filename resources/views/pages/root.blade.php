@@ -2,5 +2,10 @@
 @section('title', '首页')
 
 @section('content')
-  <h1>这里是首页</h1>
+    <section>
+        <h1>这里是首页</h1>
+        <p>
+            rebuild infrastructure, use bootstrap 4 instead of bootstrap 3.
+        </p>
+    </section>
 @stop

@@ -1,33 +1,46 @@
-<nav class="navbar navbar-default navbar-static-top">
-    <div class="container">
-        <div class="navbar-header">
 
-            <!-- Collapsed Hamburger -->
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
-                <span class="sr-only">Toggle Navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
+<header class="wrap-header">
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand logo" href="{{ url('/') }}">LaraBBS</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
             </button>
 
-            <!-- Branding Image -->
-            <a class="navbar-brand" href="{{ url('/') }}">
-                LaraBBS
-            </a>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item active">
+                        <!-- <a class="nav-link" href="{{ url('/') }}">首页 <span class="sr-only">(current)</span></a> -->
+                    </li>
+                </ul>
+                @if( Auth::check() )
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="">用户列表</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Iaosee
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="">个人中心</a>
+                            <a class="dropdown-item" href="">编辑资料</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">
+                                <form method="POST" action="">
+                                    <button class="btn btn-block btn-sm btn-warning">退出</button>
+                                </form>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+                @else
+                <form class="form-inline btns">
+                    <a href="" class="btn btn-sm btn-outline-success">登录</a>
+                    <a href="" class="btn btn-sm btn-outline-primary">注册</a>
+                </form>
+                @endif
+            </div>
         </div>
-
-        <div class="collapse navbar-collapse" id="app-navbar-collapse">
-            <!-- Left Side Of Navbar -->
-            <ul class="nav navbar-nav">
-
-            </ul>
-
-            <!-- Right Side Of Navbar -->
-            <ul class="nav navbar-nav navbar-right">
-                <!-- Authentication Links -->
-                <li><a href="#">登录</a></li>
-                <li><a href="#">注册</a></li>
-            </ul>
-        </div>
-    </div>
-</nav>
+    </nav>
+</header>

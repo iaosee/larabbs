@@ -1,0 +1,84 @@
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    min-height: 100%;
+    color: #555;
+    background-color:rgba(245, 248, 250,1);
+    font-family: Hiragino Sans GB
+               , "Hiragino Sans GB"
+               , Helvetica
+               , "Microsoft YaHei"
+               , Arial, sans-serif;
+}
+
+
+.wrap-app {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.font-size-normal {
+    font-size: 0.8rem;
+}
+
+a.link-normal {
+    text-decoration: unset;
+}
+
+/* ************************************** */
+
+/* header */
+
+.wrap-header {
+    background-color: #fff;
+    box-shadow: 0px 1px 10px 2px rgba(42, 42, 42, 0.1);
+    .logo {
+        font-size: 1.4rem;
+        font-weight: bold;
+    }
+    .btns {
+        .btn {
+            margin-left: 1rem;
+        }
+    }
+    .navbar-nav {
+        .nav-link {
+            padding-left: 1.25rem;
+            padding-right: 1.25rem;
+        }
+    }
+}
+
+/* /header */
+
+/* main */
+
+.wrap-main {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    flex: 1;
+}
+
+/* /main */
+
+/* footer */
+
+.wrap-footer {
+    margin-top: 64px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: #273035;
+    justify-self: end;
+    .links {
+        font-size: 0.8rem;
+    }
+}
+
+/* /footer */
+
+/* ************************************** */
