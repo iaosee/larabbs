@@ -1,0 +1,11 @@
+.users-show-page {
+    .avatar-wrap {
+        width: 6rem;
+        height: 6rem;
+        overflow: hidden;
+        .avatar {
+            max-width: 100%;
+            @include shadow-block;
+        }
+    }
+}

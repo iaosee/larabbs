@@ -1,7 +1,8 @@
 @extends('layouts.app')
 
-@section('content')
+@section('title', '账户注册')
 
+@section('content')
 <section>
     <div class="error-info">
         @include('shared._errors')

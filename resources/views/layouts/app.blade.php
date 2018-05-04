@@ -23,6 +23,7 @@
         <main class="wrap-main {{ route_class() }}-page">
 
             <div class="container">
+                @include('shared._message')
                 @yield('content')
             </div>
 

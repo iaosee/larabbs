@@ -10533,15 +10533,15 @@ a.link-normal {
 .user-form {
   padding: 2rem 5rem;
   background-color: #fff;
-  -webkit-box-shadow: 1px 2px 10px #eee;
-          box-shadow: 1px 2px 10px #eee;
+  -webkit-box-shadow: 2px 2px 10px #eee;
+          box-shadow: 2px 2px 10px #eee;
 }
 
 .user-form .form-group {
   margin-bottom: 2rem;
 }
 
-.user-form .form-group input {
+.user-form .form-group .form-control {
   font-size: 14px;
 }
 
@@ -10568,5 +10568,17 @@ a.link-normal {
 .register-page .captcha-img-wrap .captcha-img {
   height: 35px;
   cursor: pointer;
+}
+
+.users-show-page .avatar-wrap {
+  width: 6rem;
+  height: 6rem;
+  overflow: hidden;
+}
+
+.users-show-page .avatar-wrap .avatar {
+  max-width: 100%;
+  -webkit-box-shadow: 2px 2px 10px #eee;
+          box-shadow: 2px 2px 10px #eee;
 }
 
