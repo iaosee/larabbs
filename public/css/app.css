@@ -10559,3 +10559,13 @@ a.link-normal {
   color: #00B5AD;
 }
 
+.register-page .captcha-img-wrap .input-group-text {
+  padding: 0;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+
+.register-page .captcha-img-wrap .captcha-img {
+  height: 35px;
+}
+

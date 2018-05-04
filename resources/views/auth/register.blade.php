@@ -26,6 +26,16 @@
                     <input type="password" class="form-control {{ $errors->has('password_confirmation') ? 'is-invalid' : ''}}" placeholder="确认密码"  name="password_confirmation" value="">
                 </div>
                 <div class="form-group">
+                    <div class="input-group">
+                        <input type="captcha" class="form-control {{ $errors->has('captcha') ? 'is-invalid' : ''}}" placeholder="验证码"  name="captcha" value="">
+                        <div class="input-group-prepend" class="captcha-img-wrap">
+                            <div class="input-group-text">
+                                <img class="thumbnail captcha-img" src="{{ captcha_src('flat') }}" onclick="this.src='/captcha/flat?'+Math.random()" title="点击图片重新获取验证码">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
                     <button  type="submit" class="btn btn-primary btn-lg btn-block form-submit-button">注册</button>
                     <p>已有账户？<a href="{{ route('login') }}">立即登录</a></p>
                 </div>
