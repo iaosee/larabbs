@@ -10,7 +10,7 @@
     </div>
     <div class="row">
         <div class="col-md-6 offset-md-3">
-            <form class="user-form" method="POST" action="{{ route('users.update', $user->id) }}">
+            <form class="user-form" method="POST" enctype="multipart/form-data" action="{{ route('users.update', $user->id) }}">
                 <input type="hidden" name="_method" value="PUT">
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
@@ -32,6 +32,12 @@
                 <div class="form-group">
                     <input type="password" class="form-control {{ $errors->has('password_confirmation') ? 'is-invalid' : ''}}" placeholder="确认密码"  name="password_confirmation" value="">
                 </div> -->
+                <div class="form-group">
+                    <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="custom-avatar" name="avatar">
+                        <label class="custom-file-label" for="custom-avatar">Choose file</label>
+                    </div>
+                </div>
                 <div class="form-group">
                     <button  type="submit" class="btn btn-primary btn-lg btn-block form-submit-button">保存</button>
                 </div>

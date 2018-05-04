@@ -7,7 +7,7 @@
         <div class="user-intro">
             <div class="media">
                 <div class="avatar-wrap">
-                    <img class="rounded-circle avatar img-responsive" src="https://fsdhubcdn.phphub.org/uploads/images/201709/20/1/PtDKbASVcz.png?imageView2/1/w/600/h/600" alt="user avatar">
+                    <img class="rounded-circle avatar img-responsive" src="{{ config('app.url') . $user->avatar }}" alt="user avatar">
                 </div>
                 <div class="media-body">
                     <h2> <small>@</small> {{ $user->name }}</h2>
@@ -22,7 +22,7 @@
             <div class="col-md-3">
                 <div class="card user-intro">
                     <div class="text-center">
-                        <img class="img-thumbnail rounded avatar" src="https://fsdhubcdn.phphub.org/uploads/images/201709/20/1/PtDKbASVcz.png?imageView2/1/w/600/h/600" width="300px" height="300px">
+                        <img class="img-thumbnail rounded avatar" src="{{ config('app.url') . $user->avatar }}" width="300px" height="300px">
                         <h1 class="h4"> <small class="text-info">@</small> <span class="text-success user-name">{{ $user->name }}</span></h1>
                     </div>
                     <div class="card-body">

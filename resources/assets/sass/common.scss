@@ -4,8 +4,9 @@
     @include shadow-block;
     .form-group {
         margin-bottom: 2rem;
+        label,
         .form-control {
-            font-size: 14px;
+            // font-size: 14px;
         }
     }
     button.form-submit-button {
