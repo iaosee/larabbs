@@ -10567,5 +10567,6 @@ a.link-normal {
 
 .register-page .captcha-img-wrap .captcha-img {
   height: 35px;
+  cursor: pointer;
 }
 
