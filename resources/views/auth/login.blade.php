@@ -37,7 +37,7 @@
                 </div>
                 <div class="form-group">
                     <button  type="submit" class="btn btn-primary btn-lg btn-block form-submit-button">登录</button>
-                    <p>还没有账户？<a href="{{ route('register') }}">立即注册</a></p>
+                    <p>没有账户？<a href="{{ route('register') }}">立即注册</a></p>
                 </div>
             </form>
         </div>

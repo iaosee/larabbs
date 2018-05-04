@@ -9,6 +9,14 @@ use App\Models\User;
 
 class UsersController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth', [
+            'except' => ['show'],       // show 方法不使用 auth 验证
+        ]);
+    }
+
     public function show(User $user)
     {
     	return view('users.show', compact('user'));
@@ -16,11 +24,14 @@ class UsersController extends Controller
 
     public function edit(User $user)
     {
+        $this->authorize('update', $user);
         return view('users.edit', compact('user'));
     }
 
     public function update(UserRequest $request, ImageUploadHandler $uploader, User $user)
     {
+        $this->authorize('update', $user);
+
         // 获取上传文件
         // $request->file('avatar');
         // $request->avatar;
