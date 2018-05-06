@@ -1,9 +1,16 @@
 @extends('layouts.app')
+@section('title', isset($category) ? $category->name : '话题列表')
+
 
 @section('content')
 <section>
     <div class="row">
         <div class="col-md-9">
+            @if (isset($category))
+                <div class="alert alert-info" role="alert">
+                    {{ $category->name }} ：{{ $category->description }}
+                </div>
+            @endif
             @include('topics._topic_list', ['topics' => $topics])
         </div>
         <div class="col-md-3">

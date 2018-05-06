@@ -46,19 +46,26 @@ a.link-normal {
             }
         }
         .navbar-nav {
-            .nav-link {
-                padding: 1rem 1.25rem;
-                transition: all .5s;
-                &.username {
-                    position: relative;
-                    padding-left: 2rem;
-                    & img {
-                        position: absolute;
-                        left: .4rem;
+            .nav-item {
+                .nav-link {
+                    padding: 1rem 1.25rem;
+                    transition: all .5s;
+                    &.username {
+                        position: relative;
+                        padding-left: 2rem;
+                        & img {
+                            position: absolute;
+                            left: .4rem;
+                        }
+                    }
+                    &:hover {
+                        background-color: rgba($color: $parmary-color, $alpha: 0.2);
                     }
                 }
-                &:hover {
-                    background-color: rgba($color: $parmary-color, $alpha: 0.2);
+                &.active {
+                    .nav-link {
+                        background-color: rgba($color: $parmary-color, $alpha: 0.2);
+                    }
                 }
             }
         }

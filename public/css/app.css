@@ -10498,23 +10498,27 @@ a.link-normal {
   margin-left: 1rem;
 }
 
-.wrap-header .navbar .navbar-nav .nav-link {
+.wrap-header .navbar .navbar-nav .nav-item .nav-link {
   padding: 1rem 1.25rem;
   -webkit-transition: all .5s;
   transition: all .5s;
 }
 
-.wrap-header .navbar .navbar-nav .nav-link.username {
+.wrap-header .navbar .navbar-nav .nav-item .nav-link.username {
   position: relative;
   padding-left: 2rem;
 }
 
-.wrap-header .navbar .navbar-nav .nav-link.username img {
+.wrap-header .navbar .navbar-nav .nav-item .nav-link.username img {
   position: absolute;
   left: .4rem;
 }
 
-.wrap-header .navbar .navbar-nav .nav-link:hover {
+.wrap-header .navbar .navbar-nav .nav-item .nav-link:hover {
+  background-color: rgba(0, 181, 173, 0.2);
+}
+
+.wrap-header .navbar .navbar-nav .nav-item.active .nav-link {
   background-color: rgba(0, 181, 173, 0.2);
 }
 
@@ -10561,6 +10565,11 @@ a.link-normal {
   margin-bottom: 2rem;
 }
 
+.user-form .form-group label,
+.user-form .form-group .form-control {
+  font-size: 1rem;
+}
+
 .user-form button.form-submit-button {
   margin-top: 3rem;
   margin-bottom: 1rem;
@@ -10573,6 +10582,27 @@ a.link-normal {
 
 .page-header .page-title {
   color: #00B5AD;
+}
+
+.topic-list {
+  background-color: #fff;
+  padding: 2rem 1rem;
+  -webkit-box-shadow: 1px 1px 10px #eee;
+          box-shadow: 1px 1px 10px #eee;
+  border-radius: .2rem;
+}
+
+.topic-list .media {
+  padding: 1.25rem;
+  border-bottom: 1px solid #eee;
+}
+
+.topic-list .media .card {
+  border: 0;
+}
+
+.topic-list .media .card .card-body {
+  padding: 0;
 }
 
 .register-page .captcha-img-wrap .input-group-text {

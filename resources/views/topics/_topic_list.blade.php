@@ -20,7 +20,7 @@
                                         {{ substr($topic->body, 0, 300) }}
                                     </p>
                                     <div class="links text-right">
-                                        <a href="#" class="card-link" title="{{ $topic->category->name }}">{{ $topic->category->name }}</a>
+                                        <a href="{{ route('categories.show', $topic->category->id) }}" class="card-link" title="{{ $topic->category->name }}">{{ $topic->category->name }}</a>
                                         <span> • </span>
                                         <span href="#" class="card-link text-secondary">{{ $topic->updated_at->diffForHumans() }}</span>
                                     </div>

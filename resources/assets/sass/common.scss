@@ -6,7 +6,7 @@
         margin-bottom: 2rem;
         label,
         .form-control {
-            // font-size: 14px;
+            font-size: 1rem;
         }
     }
     button.form-submit-button {
@@ -20,5 +20,23 @@
     margin-bottom: 2rem;
     .page-title {
         color: $parmary-color;
+    }
+}
+
+
+.topic-list {
+    background-color: #fff;
+    padding: 2rem 1rem;
+    box-shadow: 1px 1px 10px #eee;
+    border-radius: .2rem;
+    .media {
+        padding: 1.25rem;
+        border-bottom: 1px solid #eee;
+        .card {
+            border: 0;
+            .card-body {
+                padding: 0;
+            }
+        }
     }
 }

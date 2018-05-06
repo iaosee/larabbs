@@ -9,9 +9,12 @@
 
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                    <li class="nav-item {{ Request::path() == '/' ? 'active' : '' }}">
-                        <a class="nav-link" href="{{ url('/') }}">首页</a>
-                    </li>
+                    <li class="nav-item {{ Request::path() == '/' ? 'active' : '' }}"><a class="nav-link" href="{{ url('/') }}">首页</a></li>
+                    <li class="nav-item {{ Request::path() == 'topics' ? 'active' : '' }}"><a class="nav-link" href="{{ route('topics.index') }}">话题</a></li>
+                    <li class="nav-item {{ Request::path() == 'categories/1' ? 'active' : '' }}"><a class="nav-link" href="{{ route('categories.show', 1) }}">分享</a></li>
+                    <li class="nav-item {{ Request::path() == 'categories/2' ? 'active' : '' }}"><a class="nav-link" href="{{ route('categories.show', 2) }}">教程</a></li>
+                    <li class="nav-item {{ Request::path() == 'categories/3' ? 'active' : '' }}"><a class="nav-link" href="{{ route('categories.show', 3) }}">问答</a></li>
+                    <li class="nav-item {{ Request::path() == 'categories/4' ? 'active' : '' }}"><a class="nav-link" href="{{ route('categories.show', 4) }}">公告</a></li>
                 </ul>
                 @if( Auth::check() )
                 <ul class="navbar-nav ml-auto">
