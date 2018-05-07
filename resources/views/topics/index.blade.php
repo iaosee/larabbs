@@ -6,12 +6,21 @@
 <section>
     <div class="row">
         <div class="col-md-9">
-            @if (isset($category))
-                <div class="alert alert-info" role="alert">
-                    {{ $category->name }} ：{{ $category->description }}
+            <div class="topic-wrap">
+                @if( isset($category) )
+                <div>
+                    <button class="btn btn-info pull-left category-button" title="{{ $category->description }}">{{ $category->name }}</button>
                 </div>
-            @endif
-            @include('topics._topic_list', ['topics' => $topics])
+                @endif
+                <div class="clearfix">
+                    <div class="btn-group pull-right" role="group">
+                        <a href="{{ Request::url() }}?order=default" class="btn btn-light text-muted {{ active_class( !if_query('order', 'recent')) }}">最后回复</a>
+                        <a href="{{ Request::url() }}?order=recent" class="btn btn-light text-muted {{ active_class(if_query('order', 'recent')) }}">最新发布</a>
+                    </div>
+                </div>
+
+                @include('topics._topic_list', ['topics' => $topics])
+            </div>
         </div>
         <div class="col-md-3">
             <div class="card" style="width: 18rem;">

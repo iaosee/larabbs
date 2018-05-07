@@ -12,7 +12,7 @@
                             <div class="media-body">
                                 <div class="card-body">
                                     <h5 class="card-title d-flex justify-content-between align-items-center">
-                                        <a href="{{ route('topics.show', [$topic->id]) }}">{{ $topic->title }}</a>
+                                        <a class="topic-title" href="{{ route('topics.show', [$topic->id]) }}">{{ $topic->title }}</a>
                                         <span class="badge badge-info badge-pill pull-right">{{ $topic->reply_count }}</span>
                                     </h5>
                                     <p class="card-text">
@@ -30,7 +30,9 @@
                     </li>
                     @endforeach
                 </ul>
-                <div class="page">
-                    {{ $topics->render() }}
+                <div class="page clearfix">
+                    <div class="page-wrap pull-right">
+                        {{ $topics->render() }}
+                    </div>
                 </div>
             </div>
