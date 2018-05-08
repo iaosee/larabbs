@@ -2,10 +2,27 @@
     .avatar-wrap {
         width: 6rem;
         height: 6rem;
-        overflow: hidden;
-        .avatar {
+        margin: 1rem auto;
+        text-align: center;
+        border-radius: 50%;
+        box-shadow: 1px 1px 16px #eee;
+        border: 2px solid #00B5AD;
+        // overflow: hidden;
+        .user-avatar {
             max-width: 100%;
             @include shadow-block;
         }
+    }
+    .topics {
+        border-top: 0;
+        margin-top: 1rem;
+        .list-group-item {
+            &:first-child {
+                border-top: 0;
+            }
+        }
+    }
+    .topic-list {
+        border-top: 0;
     }
 }

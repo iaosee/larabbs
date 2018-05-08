@@ -20,37 +20,39 @@
         </div> -->
         <div class="row">
             <div class="col-md-3">
-                <div class="card user-intro">
-                    <div class="text-center">
-                        <img class="img-thumbnail rounded avatar" src="{{ config('app.url') . $user->avatar }}" width="300px" height="300px">
-                        <h1 class="h4"> <small class="text-info">@</small> <span class="text-success user-name">{{ $user->name }}</span></h1>
+                <aside class="">
+                    <div class="card aside user-intro">
+                        <div class="text-center">
+                            <div class="avatar-wrap">
+                                <img class="rounded-circle img-responsive user-avatar" src="{{ config('app.url') . $user->avatar }}" />
+                            </div>
+                            <h1 class="h4"> <small class="text-info">@</small> <span class="text-success user-name">{{ $user->name }}</span></h1>
+                            <p><a href="mailto: {{ $user->email }}">{{ $user->email }}</a></p>
+                        </div>
+                        <div class="card-body">
+                            <hr>
+                            <h4 class="h6 text-muted"><strong>个人简介</strong></h4>
+                            <p>{{ $user->introduction }}</p>
+                            <hr>
+                            <h4 class="h6 text-muted"><strong>加入于</strong></h4>
+                            <p>{{ $user->created_at->diffForHumans() }}</p>
+                        </div>
                     </div>
-                    <div class="card-body">
-                        <hr>
-                        <h4 class="h6 text-muted"><strong>个人简介</strong></h4>
-                        <p>{{ $user->introduction }}</p>
-                        <hr>
-                        <h4 class="h6 text-muted"><strong>加入于</strong></h4>
-                        <p>{{ $user->created_at->diffForHumans() }}</p>
-                    </div>
-                </div>
+                </aside>
             </div>
             <div class="col-md-9">
-
-                <div class="text-info">
-                    <h1 class="">{{ $user->name }} </h1>
-                    <h2 class="">{{ $user->email }} </h2>
-                </div>
-
                 {{-- 用户发布的内容 --}}
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="card-link">Card link</a>
-                        <a href="#" class="card-link">Another link</a>
-                    </div>
+                <div class="topic-wrap">
+                    <ul class="nav nav-tabs">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Ta 的话题</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Ta 的回复</a>
+                        </li>
+                    </ul>
+                    {{-- @include('topics._topic_list', ['topics' => $user->topics()->recent()->paginate(5)]) --}}
+                    @include('users._topics', ['topics' => $user->topics()->recent()->paginate(10)])
                 </div>
             </div>
         </div>

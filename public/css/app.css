@@ -10584,6 +10584,13 @@ a.link-normal {
   color: #00B5AD;
 }
 
+.aside {
+  border: 0;
+  border-radius: .2rem;
+  -webkit-box-shadow: 2px 2px 10px #eee;
+          box-shadow: 2px 2px 10px #eee;
+}
+
 .topic-wrap {
   background-color: #fff;
   padding: 2rem 1rem;
@@ -10633,34 +10640,39 @@ a.link-normal {
   border-radius: 500rem;
 }
 
-.topic-wrap .topic-list {
+.topic-list {
   margin-top: 2rem;
   border-top: 1px solid #eee;
 }
 
-.topic-wrap .topic-list .media {
+.topic-list .media {
   padding: 1.25rem;
   border-bottom: 1px solid #eee;
 }
 
-.topic-wrap .topic-list .media .card {
+.topic-list .media .media-left {
+  min-width: 7rem;
+  max-width: 10%;
+}
+
+.topic-list .media .card {
   width: 100%;
   border: 0;
 }
 
-.topic-wrap .topic-list .media .card .card-body {
+.topic-list .media .card .card-body {
   padding: 0;
 }
 
-.topic-wrap .topic-list .media .card .card-body .topic-title {
+.topic-list .media .card .card-body .topic-title {
   color: #444;
 }
 
-.topic-wrap .topic-list .media .card .card-body .badge {
+.topic-list .media .card .card-body .badge {
   background-color: #00B5AD;
 }
 
-.topic-wrap .topic-list .page-wrap {
+.topic-list .page-wrap {
   margin-top: 1.5rem;
 }
 
@@ -10678,12 +10690,30 @@ a.link-normal {
 .users-show-page .avatar-wrap {
   width: 6rem;
   height: 6rem;
-  overflow: hidden;
+  margin: 1rem auto;
+  text-align: center;
+  border-radius: 50%;
+  -webkit-box-shadow: 1px 1px 16px #eee;
+          box-shadow: 1px 1px 16px #eee;
+  border: 2px solid #00B5AD;
 }
 
-.users-show-page .avatar-wrap .avatar {
+.users-show-page .avatar-wrap .user-avatar {
   max-width: 100%;
   -webkit-box-shadow: 2px 2px 10px #eee;
           box-shadow: 2px 2px 10px #eee;
+}
+
+.users-show-page .topics {
+  border-top: 0;
+  margin-top: 1rem;
+}
+
+.users-show-page .topics .list-group-item:first-child {
+  border-top: 0;
+}
+
+.users-show-page .topic-list {
+  border-top: 0;
 }
 

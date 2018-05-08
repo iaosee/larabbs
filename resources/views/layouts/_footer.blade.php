@@ -10,8 +10,10 @@
                     <span>
                         LaraBBS 是一个分享与交流的平台，你可以在这里记录分享 技术、生活、想法，还有你能想到的一切 。。。
                     </span>
-                    <small> —— design & develop by <a href="mailto: xiao_f_x@163.com"><b>iaosee</b></a>
-                    <span style="color: #e27575;font-size: 14px;">❤</span></small>
+                    <small> —— design & develop by <a href="mailto: iaosee@outlook.com"><b>iaosee</b></a>
+                        <span style="color: #e27575;font-size: 14px;">❤</span>
+                        <span>😄😅😊</span>
+                    </small>
                 </p>
                 <p class="links">
                     <a href="https://laravel-china.org/" class="item" target="_blank">Laravel China 社区</a> /
