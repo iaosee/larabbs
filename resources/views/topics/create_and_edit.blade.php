@@ -3,6 +3,7 @@
 @section('content')
 
 <div class="container">
+    @include('shared._errors');
     <div class="col-md-10 offset-md-1">
 
         <div class="create-topic">
@@ -32,15 +33,15 @@
                     <input type="name" class="form-control {{ $errors->has('title') ? 'is-invalid' : ''}}" placeholder="标题" autofocus name="title" value="{{ old('title', $topic->title) }}">
                 </div>
                 <div class="form-group">
-                    <select class="form-control {{ $errors->has('category_id') ? 'is-invalid' : ''}}" name="category_id" required>
+                    <select class="form-control {{ $errors->has('category_id') ? 'is-invalid' : ''}}" name="category_id" >
                         <option value="" hidden disabled selected>请选择分类</option>
                         @foreach ($categories as $value)
-                        <option value="{{ $value->id }}">{{ $value->name }}</option>
+                        <option {{ old('category_id') == $value->id ? 'selected' : '' }} value="{{ $value->id }}" >{{ $value->name }}</option>
                         @endforeach
                     </select>
                 </div>
                 <div class="form-group">
-                    <textarea name="body" class="form-control {{ $errors->has('body') ? 'is-invalid' : ''}}" id="editor" rows="3" placeholder="请填入内容。" required>{{ old('body', $topic->body ) }}</textarea>
+                    <textarea name="body" class="form-control {{ $errors->has('body') ? 'is-invalid' : ''}}" id="editor" rows="3" placeholder="请填入内容。" >{{ old('body', $topic->body ) }}</textarea>
                 </div>
 
                 <div class="form-group">
