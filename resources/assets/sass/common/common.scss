@@ -25,6 +25,8 @@
 
 .aside {
     border: 0;
+    background-color: #fff;
+    padding: 2rem 1rem;
     border-radius: .2rem;
     @include shadow-block;
 }
