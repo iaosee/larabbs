@@ -4,8 +4,8 @@
 
 @section('content')
     <section>
-        <div class="user-intro">
-            <div class="media">
+        <!-- <div class="user-intro">
+            <div class="card">
                 <div class="avatar-wrap">
                     <img class="rounded-circle avatar img-responsive" src="{{ config('app.url') . $user->avatar }}" alt="user avatar">
                 </div>
@@ -17,7 +17,7 @@
                     </ul>
                 </div>
             </div>
-        </div>
+        </div> -->
         <div class="row">
             <div class="col-md-3">
                 <div class="card user-intro">

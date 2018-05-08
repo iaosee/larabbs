@@ -11,6 +11,10 @@
                 <div>
                     <button class="btn btn-info pull-left category-button" title="{{ $category->description }}">{{ $category->name }}</button>
                 </div>
+                @else
+                <div>
+                    <button class="btn btn-info pull-left category-button">所有话题</button>
+                </div>
                 @endif
                 <div class="clearfix">
                     <div class="btn-group pull-right" role="group">
