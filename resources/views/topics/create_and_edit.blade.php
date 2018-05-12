@@ -1,10 +1,13 @@
 @extends('layouts.app')
 
-@section('content')
+@section('style')
+<link rel="stylesheet" href="{{ asset('vendor/simplemde/simplemde.min.css') }}">
+@endsection
 
+@section('content')
 <div class="container">
-    @include('shared._errors');
-    <div class="col-md-10 offset-md-1">
+    @include('shared._errors')
+    <!-- <div class="col-md-10 offset-md-1"> -->
 
         <div class="create-topic">
             @if( $topic->id )
@@ -50,7 +53,14 @@
             </form>
         </div>
 
-    </div>
+    <!-- </div> -->
 </div>
 
+@endsection
+
+@section('script')
+<script type="text/javascript" src="{{ asset('vendor/simplemde/simplemde.min.js') }}"></script>
+<script type="text/javascript">
+    var simplemde = new SimpleMDE({ element: document.querySelector('#editor') });
+</script>
 @endsection
