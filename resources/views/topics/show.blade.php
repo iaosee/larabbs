@@ -31,6 +31,20 @@
         </div>
         <div class="col-md-3">
             <aside>
+                @can('update', $topic)
+                <div class="card aside">
+                    <div class="buttons text-center">
+                        <a href="{{route('topics.edit', $topic->id)}}" class="d-inline">
+                            <button type="button" class="btn btn-primary">编辑</button>
+                        </a>
+                        <form action="{{ route('topics.destroy', $topic->id) }}" method="post" class="d-inline">
+                            {{ csrf_field() }}
+                            {{ method_field('DELETE') }}
+                            <button type="submit" class="btn btn-danger">删除</button>
+                        </form>
+                    </div>
+                </div>
+                @endcan
                 <div class="card aside">
                     <h6 class="text-center">作者</h6>
                     <div class="card-body">
@@ -40,10 +54,6 @@
                             <button type="button" class="btn btn-sm btn-outline-secondary">私信</button>
                         </div>
                     </div>
-                </div>
-
-                <div class="card aside">
-                    <div></div>
                 </div>
             </aside>
         </div>
