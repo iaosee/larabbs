@@ -22,13 +22,7 @@
             <div class="col-md-3">
                 <aside class="">
                     <div class="card aside user-intro">
-                        <div class="text-center">
-                            <div class="avatar-wrap">
-                                <img class="rounded-circle img-responsive user-avatar" src="{{ config('app.url') . $user->avatar }}" />
-                            </div>
-                            <h1 class="h4"> <small class="text-info">@</small> <span class="text-success user-name">{{ $user->name }}</span></h1>
-                            <p><a href="mailto: {{ $user->email }}">{{ $user->email }}</a></p>
-                        </div>
+                        @include('users._user_heading', $user)
                         <div class="card-body">
                             <hr>
                             <h4 class="h6 text-muted"><strong>个人简介</strong></h4>

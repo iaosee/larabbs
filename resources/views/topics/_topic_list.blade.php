@@ -17,7 +17,7 @@
                                     </h5>
                                     <p class="card-text">
                                         {{ $topic->title }}
-                                        {{ str_limit($topic->body, 300, '...') }}
+                                        {{ str_limit(strip_tags($topic->body_parsed), 300, '...') }}
                                     </p>
                                     <div class="links text-right">
                                         <a href="{{ route('categories.show', $topic->category->id) }}" class="card-link" title="{{ $topic->category->name }}">{{ $topic->category->name }}</a>

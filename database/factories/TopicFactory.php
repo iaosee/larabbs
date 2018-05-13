@@ -15,6 +15,7 @@ $factory->define(App\Models\Topic::class, function (Faker $faker) {
         // 'name' => $faker->name,
         'title' => $sentence,
         'body' => $faker->text(),
+        'body_parsed' => $faker->text(),
         'excerpt' => $sentence,
         'created_at' => $created_at,
         'updated_at' => $updated_at,

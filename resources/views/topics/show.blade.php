@@ -1,62 +1,62 @@
 @extends('layouts.app')
 
+@section('style')
+<link rel="stylesheet" href="{{ asset('vendor/highlight/monokai.css') }}">
+@endsection
+
 @section('content')
+<section>
+    <div class="row">
+        <div class="col-md-9">
+            <div class="article-wrap">
+                <div class="article-heading">
+                    <div class="post-title text-center">
+                        <h1>{{ $topic->title }}</h1>
+                    </div>
+                    <div class="text-center text-muted">
+                        <span>{{$topic->created_at->diffForHumans()}}</span>
+                        <span> ⋅ </span>
+                        <span>回复 {{$topic->reply_count}}</span>
+                        <span> ⋅ </span>
+                        <span>查看 {{$topic->view_count}}</span>
+                    </div>
+                </div>
+                <article class="article-body">
+                    {!! $topic->body_parsed !!}
+                </article>
+                <div class="article-footer">
 
-<div class="container">
-    <div class="col-md-10 offset-md-1">
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h1>Topic / Show #{{ $topic->id }}</h1>
+                </div>
             </div>
-
-            <div class="panel-body">
-                <div class="well well-sm">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <a class="btn btn-link" href="{{ route('topics.index') }}"><i class="glyphicon glyphicon-backward"></i> Back</a>
-                        </div>
-                        <div class="col-md-6">
-                             <a class="btn btn-sm btn-warning pull-right" href="{{ route('topics.edit', $topic->id) }}">
-                                <i class="glyphicon glyphicon-edit"></i> Edit
-                            </a>
+        </div>
+        <div class="col-md-3">
+            <aside>
+                <div class="card aside">
+                    <h6 class="text-center">作者</h6>
+                    <div class="card-body">
+                        @include('users._user_heading', [ 'user' => $topic->user])
+                        <div class="buttons text-center">
+                            <button type="button" class="btn btn-sm btn-outline-primary">关注</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary">私信</button>
                         </div>
                     </div>
                 </div>
 
-                <label>Title</label>
-<p>
-	{{ $topic->title }}
-</p> <label>Body</label>
-<p>
-	{{ $topic->body }}
-</p> <label>User_id</label>
-<p>
-	{{ $topic->user_id }}
-</p> <label>Category_id</label>
-<p>
-	{{ $topic->category_id }}
-</p> <label>Reply_count</label>
-<p>
-	{{ $topic->reply_count }}
-</p> <label>View_count</label>
-<p>
-	{{ $topic->view_count }}
-</p> <label>Last_reply_user_id</label>
-<p>
-	{{ $topic->last_reply_user_id }}
-</p> <label>Order</label>
-<p>
-	{{ $topic->order }}
-</p> <label>Excerpt</label>
-<p>
-	{{ $topic->excerpt }}
-</p> <label>Slug</label>
-<p>
-	{{ $topic->slug }}
-</p>
-            </div>
+                <div class="card aside">
+                    <div></div>
+                </div>
+            </aside>
         </div>
     </div>
-</div>
+</section>
+@endsection
 
+
+@section('script')
+<script src="{{ asset('vendor/highlight/highlight.pack.js') }}"></script>
+<script>
+    $(function () {
+        hljs.initHighlightingOnLoad();
+    });
+</script>
 @endsection

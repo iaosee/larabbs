@@ -1,0 +1,34 @@
+@import "../common/markdown";
+
+.topics-show-page {
+
+    .card {
+        margin-bottom: 2rem;
+    }
+    .aside {
+        .card-body {
+            padding: 0;
+        }
+    }
+
+    .article-heading {
+        padding-bottom: 2rem;
+        border-bottom: 1px solid #f2f2f2;
+        h1 {
+            font-size: 1.8rem;
+        }
+    }
+
+    .article-wrap {
+        background-color: #fff;
+        padding: 2rem 2rem;
+        @include radius-block;
+        @include shadow-block;
+
+        .article-body {
+            padding: 1rem .5rem;
+            @include article-markdown;
+        }
+    }
+}
+

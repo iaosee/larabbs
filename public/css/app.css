@@ -10596,9 +10596,9 @@ a.link-normal {
 .topic-wrap {
   background-color: #fff;
   padding: 2rem 1rem;
-  -webkit-box-shadow: 1px 1px 10px #eee;
-          box-shadow: 1px 1px 10px #eee;
   border-radius: .2rem;
+  -webkit-box-shadow: 2px 2px 10px #eee;
+          box-shadow: 2px 2px 10px #eee;
 }
 
 .topic-wrap .category-button {
@@ -10678,18 +10678,7 @@ a.link-normal {
   margin-top: 1.5rem;
 }
 
-.register-page .captcha-img-wrap .input-group-text {
-  padding: 0;
-  border-top-right-radius: 2px;
-  border-bottom-right-radius: 2px;
-}
-
-.register-page .captcha-img-wrap .captcha-img {
-  height: 35px;
-  cursor: pointer;
-}
-
-.users-show-page .avatar-wrap {
+.user-heading .avatar-wrap {
   width: 6rem;
   height: 6rem;
   margin: 1rem auto;
@@ -10700,10 +10689,25 @@ a.link-normal {
   border: 2px solid #00B5AD;
 }
 
-.users-show-page .avatar-wrap .user-avatar {
+.user-heading .avatar-wrap .user-avatar {
   max-width: 100%;
   -webkit-box-shadow: 2px 2px 10px #eee;
           box-shadow: 2px 2px 10px #eee;
+}
+
+.user-heading a {
+  text-decoration: none;
+}
+
+.register-page .captcha-img-wrap .input-group-text {
+  padding: 0;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+
+.register-page .captcha-img-wrap .captcha-img {
+  height: 35px;
+  cursor: pointer;
 }
 
 .users-show-page .topics {
@@ -10717,5 +10721,222 @@ a.link-normal {
 
 .users-show-page .topic-list {
   border-top: 0;
+}
+
+.topics-show-page .card {
+  margin-bottom: 2rem;
+}
+
+.topics-show-page .aside .card-body {
+  padding: 0;
+}
+
+.topics-show-page .article-heading {
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.topics-show-page .article-heading h1 {
+  font-size: 1.8rem;
+}
+
+.topics-show-page .article-wrap {
+  background-color: #fff;
+  padding: 2rem 2rem;
+  border-radius: .2rem;
+  -webkit-box-shadow: 2px 2px 10px #eee;
+          box-shadow: 2px 2px 10px #eee;
+}
+
+.topics-show-page .article-wrap .article-body {
+  padding: 1rem .5rem;
+}
+
+.topics-show-page .article-wrap .article-body h1,
+.topics-show-page .article-wrap .article-body h2,
+.topics-show-page .article-wrap .article-body h3,
+.topics-show-page .article-wrap .article-body h4,
+.topics-show-page .article-wrap .article-body h5,
+.topics-show-page .article-wrap .article-body h6 {
+  word-break: break-all !important;
+  margin: 20px 0;
+  padding-bottom: .3em;
+  line-height: 1.2;
+  text-align: left;
+  font-weight: bold;
+  color: #2c3e50;
+  position: relative;
+}
+
+.topics-show-page .article-wrap .article-body h1 {
+  font-size: 26px !important;
+}
+
+.topics-show-page .article-wrap .article-body h2 {
+  font-size: 22px !important;
+}
+
+.topics-show-page .article-wrap .article-body h3 {
+  font-size: 18px !important;
+}
+
+.topics-show-page .article-wrap .article-body h4 {
+  font-size: 16px !important;
+}
+
+.topics-show-page .article-wrap .article-body h5,
+.topics-show-page .article-wrap .article-body h6 {
+  font-size: 14px !important;
+}
+
+.topics-show-page .article-wrap .article-body h1::before,
+.topics-show-page .article-wrap .article-body h2::before,
+.topics-show-page .article-wrap .article-body h3::before {
+  font-weight: 400;
+  font-size: .8rem;
+  text-align: right;
+  width: 3.5ch;
+  padding-right: 1ch;
+  margin-left: -3.5ch;
+  display: inline-block;
+  color: #42b983;
+  font-style: inherit;
+}
+
+.topics-show-page .article-wrap .article-body h1::before {
+  content: '#1';
+}
+
+.topics-show-page .article-wrap .article-body h2::before {
+  content: '#2';
+}
+
+.topics-show-page .article-wrap .article-body h3::before {
+  content: '#3';
+}
+
+.topics-show-page .article-wrap .article-body h4::before {
+  content: '#4';
+}
+
+.topics-show-page .article-wrap .article-body a {
+  color: #42b983 !important;
+  text-decoration: none;
+}
+
+.topics-show-page .article-wrap .article-body a:hover {
+  text-decoration: underline;
+}
+
+.topics-show-page .article-wrap .article-body ul,
+.topics-show-page .article-wrap .article-body ol {
+  padding-left: 30px;
+}
+
+.topics-show-page .article-wrap .article-body li {
+  line-height: 24px;
+}
+
+.topics-show-page .article-wrap .article-body hr {
+  height: 4px;
+  padding: 0;
+  margin: 16px 0;
+  background-color: #e7e7e7;
+  border: 0 none;
+  overflow: hidden;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  border-bottom: 1px solid #ddd;
+}
+
+.topics-show-page .article-wrap .article-body p {
+  letter-spacing: 1px !important;
+  line-height: 1.7 !important;
+  min-height: 1em !important;
+  -webkit-box-sizing: border-box !important;
+          box-sizing: border-box !important;
+  word-wrap: break-word !important;
+  text-align: justify;
+  margin: 20px 0 !important;
+}
+
+.topics-show-page .article-wrap .article-body blockquote {
+  border-left: 4px solid #42b983;
+  padding: 0 15px !important;
+  margin: 0px;
+}
+
+.topics-show-page .article-wrap .article-body strong {
+  font-weight: bold;
+  /*border-bottom: 2px solid #BADA55;*/
+  /*color: #898989;*/
+}
+
+.topics-show-page .article-wrap .article-body pre {
+  border-radius: 3px;
+  word-wrap: break-word;
+  font-size: 13px;
+  background: #00171b;
+  padding: 12px 13px;
+}
+
+.topics-show-page .article-wrap .article-body code {
+  margin: 0 2px;
+  padding: 3px 5px;
+  border-radius: 2px;
+  white-space: inherit;
+  background-color: #f8f8f8;
+}
+
+.topics-show-page .article-wrap .article-body pre code {
+  background-color: inherit;
+}
+
+.topics-show-page .article-wrap .article-body table {
+  line-height: 1.6rem;
+  border-collapse: collapse;
+  border-spacing: 0;
+  empty-cells: show;
+  border: 1px solid #cbcbcb;
+}
+
+.topics-show-page .article-wrap .article-body thead {
+  background-color: #e0e0e0;
+  color: #000;
+  text-align: left;
+  vertical-align: bottom;
+}
+
+.topics-show-page .article-wrap .article-body td,
+.topics-show-page .article-wrap .article-body th {
+  border-left: 1px solid #cbcbcb;
+  border-width: 0 0 0 1px;
+  margin: 0;
+  overflow: visible;
+  padding: .5em 1em;
+}
+
+.topics-show-page .article-wrap .article-body table {
+  line-height: 1.6rem;
+  border-collapse: collapse;
+  border-spacing: 0;
+  empty-cells: show;
+  border: 1px solid #cbcbcb;
+}
+
+.topics-show-page .article-wrap .article-body thead {
+  background-color: #f2f2f2;
+  color: #000;
+  text-align: left;
+  vertical-align: bottom;
+}
+
+.topics-show-page .article-wrap .article-body td,
+.topics-show-page .article-wrap .article-body th {
+  border-left: 1px solid #cbcbcb;
+  border-width: 0 0 0 1px;
+  margin: 0;
+  overflow: visible;
+  padding: .5em 1em;
 }
 

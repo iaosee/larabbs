@@ -39,7 +39,7 @@
                     <select class="form-control {{ $errors->has('category_id') ? 'is-invalid' : ''}}" name="category_id" >
                         <option value="" hidden disabled selected>请选择分类</option>
                         @foreach ($categories as $value)
-                        <option {{ old('category_id') == $value->id ? 'selected' : '' }} value="{{ $value->id }}" >{{ $value->name }}</option>
+                        <option {{ old('category_id') == $value->id || $topic->category_id == $value->id ? 'selected' : '' }} value="{{ $value->id }}" >{{ $value->name }}</option>
                         @endforeach
                     </select>
                 </div>

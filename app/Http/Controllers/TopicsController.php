@@ -8,7 +8,6 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\TopicRequest;
 use App\Handlers\ImageUploadHandler;
 use App\Models\Category;
-use Auth;
 
 class TopicsController extends Controller
 {
@@ -40,16 +39,16 @@ class TopicsController extends Controller
 	{
         // $topic = Topic::create($request->all());
         $topic->fill($request->all());
-        $topic->user_id = Auth::id();
         $topic->save();
 
-		return redirect()->route('topics.show', $topic->id)->with('message', 'Created successfully.');
+		return redirect()->route('topics.show', $topic->id)->with('success', '发布成功.');
 	}
 
 	public function edit(Topic $topic)
 	{
+        $categories = Category::all();
         $this->authorize('update', $topic);
-		return view('topics.create_and_edit', compact('topic'));
+		return view('topics.create_and_edit', compact('topic', 'categories'));
 	}
 
 	public function update(TopicRequest $request, Topic $topic)
@@ -57,7 +56,7 @@ class TopicsController extends Controller
 		$this->authorize('update', $topic);
 		$topic->update($request->all());
 
-		return redirect()->route('topics.show', $topic->id)->with('message', 'Updated successfully.');
+		return redirect()->route('topics.show', $topic->id)->with('success', '更新成功.');
 	}
 
 	public function destroy(Topic $topic)
@@ -65,7 +64,7 @@ class TopicsController extends Controller
 		$this->authorize('destroy', $topic);
 		$topic->delete();
 
-		return redirect()->route('topics.index')->with('message', 'Deleted successfully.');
+		return redirect()->route('topics.index')->with('success', '删除成功.');
     }
 
     public function uploadImage(Request $request, ImageUploadHandler $uploader)
@@ -76,6 +75,7 @@ class TopicsController extends Controller
             'msg'       => '上传失败!',
             'file_path' => ''
         ];
+
         // 判断是否有上传文件，并赋值给 $file
         if ($file = $request->upload_file) {
             // 保存图片到本地
