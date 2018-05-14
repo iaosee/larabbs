@@ -8,24 +8,20 @@ use Parsedown;
 class MarkdownParseHandler
 {
 
-    private static $parsedown;
+    private $parsedown;
 
-
-    private static function initParsedown()
+    public function __construct()
     {
 
-        if( self::$parsedown ) {
-            return;
+        if( !$this->parsedown ) {
+            $this->parsedown = new Parsedown();
         }
 
-        self::$parsedown = new Parsedown();
-        // self::$parsedown->setSafeMode(true);
+        $this->parsedown->setSafeMode(true);
     }
 
-    public static function parser($markdown)
+    public function parser($markdown)
     {
-        self::initParsedown();
-
-        return self::$parsedown->text($markdown);
+        return $this->parsedown->text($markdown);
     }
 }
