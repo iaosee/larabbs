@@ -44,7 +44,7 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <textarea name="body" class="form-control {{ $errors->has('body') ? 'is-invalid' : ''}}" id="editor" rows="3" placeholder="请填入内容。" >{{ old('body', $topic->body ) }}</textarea>
+                    <textarea name="body" class="form-control {{ $errors->has('body') ? 'is-invalid' : ''}}" id="editor" rows="3" placeholder="请填入内容。" >{{old('body', $topic->body)}}</textarea>
                 </div>
 
                 <div class="form-group">
