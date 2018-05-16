@@ -14,3 +14,7 @@
 @mixin padding-default {
     padding: 2rem 1rem;
 }
+
+@mixin margin-default {
+    margin: 2rem auto;
+}

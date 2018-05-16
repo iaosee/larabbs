@@ -28,6 +28,11 @@
 
                 </div>
             </div>
+
+            <div class="article-reply">
+                @include('topics._reply_from', ['topic' => $topic])
+                @include('topics._reply_list', ['replies' => $topic->replies()->with('user')->get()])
+            </div>
         </div>
         <div class="col-md-3">
             <aside>

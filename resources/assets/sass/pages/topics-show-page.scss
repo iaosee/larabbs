@@ -30,5 +30,12 @@
             @include article-markdown;
         }
     }
+
+    .article-reply {
+        background-color: #fff;
+        @include padding-default;
+        @include margin-default;
+        @include shadow-block;
+    }
 }
 
