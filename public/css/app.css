@@ -10699,6 +10699,56 @@ a.link-normal {
   text-decoration: none;
 }
 
+.page .page-wrap {
+  margin-top: 1.5rem;
+}
+
+.add-reply .CodeMirror,
+.add-reply .CodeMirror-scroll {
+  border-radius: .2rem;
+  min-height: 5rem;
+}
+
+.reply-list {
+  margin-top: 2rem;
+}
+
+.reply-list .media {
+  padding: .4rem;
+  border-bottom: 1px solid #eee;
+  position: relative;
+}
+
+.reply-list .media .info a {
+  color: #657786;
+  font-weight: bold;
+}
+
+.reply-list .media .media-left {
+  min-width: 4rem;
+  max-width: 10%;
+}
+
+.reply-list .media .media-left .avatar-box {
+  margin-top: .8rem;
+}
+
+.reply-list .media .card {
+  width: 100%;
+  border: 0;
+  margin: 0;
+}
+
+.reply-list .media .card .card-body {
+  padding: .5rem;
+}
+
+.reply-list .media .delete-reply {
+  position: absolute;
+  top: .8rem;
+  right: .8rem;
+}
+
 .register-page .captcha-img-wrap .input-group-text {
   padding: 0;
   border-top-right-radius: 2px;

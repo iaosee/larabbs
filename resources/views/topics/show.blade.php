@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('style')
+<link rel="stylesheet" href="{{ asset('vendor/simplemde/simplemde.min.css') }}">
 <link rel="stylesheet" href="{{ asset('vendor/highlight/monokai.css') }}">
 @endsection
 
@@ -68,10 +69,19 @@
 
 
 @section('script')
+
+<script type="text/javascript" src="{{ asset('vendor/simplemde/simplemde.min.js') }}"></script>
 <script src="{{ asset('vendor/highlight/highlight.pack.js') }}"></script>
 <script>
+
     $(function () {
         hljs.initHighlightingOnLoad();
     });
+
+    var simplemde = new SimpleMDE({
+        element: document.querySelector('#editor'),
+        toolbar: false
+    });
+
 </script>
 @endsection

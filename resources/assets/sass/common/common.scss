@@ -121,3 +121,52 @@
         text-decoration: none;
     }
 }
+
+.page {
+    .page-wrap {
+        margin-top: 1.5rem;
+    }
+}
+
+
+.add-reply {
+    .CodeMirror,
+    .CodeMirror-scroll {
+        border-radius: .2rem;
+        min-height: 5rem;
+    }
+}
+.reply-list {
+    margin-top: 2rem;
+    .media {
+        padding: .4rem;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        .info {
+            a {
+                color: #657786;
+                font-weight: bold;
+            }
+        }
+        .media-left {
+            min-width: 4rem;
+            max-width: 10%;
+            .avatar-box {
+                margin-top: .8rem;
+            }
+        }
+        .card {
+            width: 100%;
+            border: 0;
+            margin: 0;
+            .card-body {
+                padding: .5rem;
+            }
+        }
+        .delete-reply {
+            position: absolute;
+            top: .8rem;
+            right: .8rem;
+        }
+    }
+}
