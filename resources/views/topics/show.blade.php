@@ -7,6 +7,9 @@
 
 @section('content')
 <section>
+    <div class="error-info">
+        @include('shared._errors')
+    </div>
     <div class="row">
         <div class="col-md-9">
             <div class="article-wrap">
@@ -31,7 +34,7 @@
             </div>
 
             <div class="article-reply">
-                @include('topics._reply_from', ['topic' => $topic])
+                @includeWhen(Auth::check(), 'topics._reply_from', ['topic' => $topic])
                 @include('topics._reply_list', ['replies' => $topic->replies()->with('user')->get()])
             </div>
         </div>
