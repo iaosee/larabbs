@@ -27,7 +27,7 @@
 
         .article-body {
             padding: 1rem .5rem;
-            @include article-markdown;
+            @include markdown-html-style;
         }
     }
 
@@ -36,6 +36,26 @@
         @include padding-default;
         @include margin-default;
         @include shadow-block;
+
+        .reply-item.flicker {
+            animation-name: flicker;
+            animation-duration: .5s;
+            animation-iteration-count: 3;
+            animation-timing-function: ease-out;
+        }
+        .reply-content {
+            @include markdown-html-style;
+        }
     }
+
 }
 
+
+@keyframes flicker {
+    0% {
+        box-shadow: 0 0 5px rgba(0, 255, 0, .2);
+    }
+    100% {
+        box-shadow: 0 0 20px rgba(0, 255, 0, .6);
+    }
+}

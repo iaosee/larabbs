@@ -21,6 +21,11 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('topics.create') }}">创建话题</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('notifications.index') }}">
+                            <span class="badge badge-pill badge-{{ Auth::user()->notification_count > 0 ? 'success' : 'secondary' }} "  data-toggle="tooltip" data-placement="top" title="消息提醒">{{ Auth::user()->notification_count }}</span>
+                        </a>
+                    </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle username" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <img width="20" height="20" class="rounded-circle avatar img-responsive" src="{{ config('app.url') . Auth::user()->avatar }}" alt="user avatar" />

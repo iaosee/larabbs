@@ -10998,3 +10998,273 @@ a.link-normal {
           box-shadow: 2px 2px 10px #eee;
 }
 
+.topics-show-page .article-reply .reply-item.flicker {
+  -webkit-animation-name: flicker;
+          animation-name: flicker;
+  -webkit-animation-duration: .5s;
+          animation-duration: .5s;
+  -webkit-animation-iteration-count: 3;
+          animation-iteration-count: 3;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+}
+
+.topics-show-page .article-reply .reply-content h1,
+.topics-show-page .article-reply .reply-content h2,
+.topics-show-page .article-reply .reply-content h3,
+.topics-show-page .article-reply .reply-content h4,
+.topics-show-page .article-reply .reply-content h5,
+.topics-show-page .article-reply .reply-content h6 {
+  word-break: break-all !important;
+  margin: 20px 0;
+  padding-bottom: .3em;
+  line-height: 1.2;
+  text-align: left;
+  font-weight: bold;
+  color: #2c3e50;
+  position: relative;
+}
+
+.topics-show-page .article-reply .reply-content h1 {
+  font-size: 26px !important;
+}
+
+.topics-show-page .article-reply .reply-content h2 {
+  font-size: 22px !important;
+}
+
+.topics-show-page .article-reply .reply-content h3 {
+  font-size: 18px !important;
+}
+
+.topics-show-page .article-reply .reply-content h4 {
+  font-size: 16px !important;
+}
+
+.topics-show-page .article-reply .reply-content h5,
+.topics-show-page .article-reply .reply-content h6 {
+  font-size: 14px !important;
+}
+
+.topics-show-page .article-reply .reply-content h1::before,
+.topics-show-page .article-reply .reply-content h2::before,
+.topics-show-page .article-reply .reply-content h3::before {
+  font-weight: 400;
+  font-size: .8rem;
+  text-align: right;
+  width: 3.5ch;
+  padding-right: 1ch;
+  margin-left: -3.5ch;
+  display: inline-block;
+  color: #42b983;
+  font-style: inherit;
+}
+
+.topics-show-page .article-reply .reply-content h1::before {
+  content: '#1';
+}
+
+.topics-show-page .article-reply .reply-content h2::before {
+  content: '#2';
+}
+
+.topics-show-page .article-reply .reply-content h3::before {
+  content: '#3';
+}
+
+.topics-show-page .article-reply .reply-content h4::before {
+  content: '#4';
+}
+
+.topics-show-page .article-reply .reply-content a {
+  color: #42b983 !important;
+  text-decoration: none;
+}
+
+.topics-show-page .article-reply .reply-content a:hover {
+  text-decoration: underline;
+}
+
+.topics-show-page .article-reply .reply-content ul,
+.topics-show-page .article-reply .reply-content ol {
+  padding-left: 30px;
+}
+
+.topics-show-page .article-reply .reply-content li {
+  line-height: 24px;
+}
+
+.topics-show-page .article-reply .reply-content hr {
+  height: 4px;
+  padding: 0;
+  margin: 16px 0;
+  background-color: #e7e7e7;
+  border: 0 none;
+  overflow: hidden;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  border-bottom: 1px solid #ddd;
+}
+
+.topics-show-page .article-reply .reply-content p {
+  letter-spacing: 1px !important;
+  line-height: 1.7 !important;
+  min-height: 1em !important;
+  -webkit-box-sizing: border-box !important;
+          box-sizing: border-box !important;
+  word-wrap: break-word !important;
+  text-align: justify;
+  margin: 20px 0 !important;
+}
+
+.topics-show-page .article-reply .reply-content blockquote {
+  border-left: 4px solid #42b983;
+  padding: 0 15px !important;
+  margin: 0px;
+}
+
+.topics-show-page .article-reply .reply-content strong {
+  font-weight: bold;
+  /*border-bottom: 2px solid #BADA55;*/
+  /*color: #898989;*/
+}
+
+.topics-show-page .article-reply .reply-content pre {
+  border-radius: 3px;
+  word-wrap: break-word;
+  font-size: 13px;
+  background: #00171b;
+  padding: 12px 13px;
+}
+
+.topics-show-page .article-reply .reply-content code {
+  margin: 0 2px;
+  padding: 3px 5px;
+  border-radius: 2px;
+  white-space: inherit;
+  background-color: #f8f8f8;
+}
+
+.topics-show-page .article-reply .reply-content pre code {
+  background-color: inherit;
+}
+
+.topics-show-page .article-reply .reply-content table {
+  line-height: 1.6rem;
+  border-collapse: collapse;
+  border-spacing: 0;
+  empty-cells: show;
+  border: 1px solid #cbcbcb;
+}
+
+.topics-show-page .article-reply .reply-content thead {
+  background-color: #e0e0e0;
+  color: #000;
+  text-align: left;
+  vertical-align: bottom;
+}
+
+.topics-show-page .article-reply .reply-content td,
+.topics-show-page .article-reply .reply-content th {
+  border-left: 1px solid #cbcbcb;
+  border-width: 0 0 0 1px;
+  margin: 0;
+  overflow: visible;
+  padding: .5em 1em;
+}
+
+.topics-show-page .article-reply .reply-content table {
+  line-height: 1.6rem;
+  border-collapse: collapse;
+  border-spacing: 0;
+  empty-cells: show;
+  border: 1px solid #cbcbcb;
+}
+
+.topics-show-page .article-reply .reply-content thead {
+  background-color: #f2f2f2;
+  color: #000;
+  text-align: left;
+  vertical-align: bottom;
+}
+
+.topics-show-page .article-reply .reply-content td,
+.topics-show-page .article-reply .reply-content th {
+  border-left: 1px solid #cbcbcb;
+  border-width: 0 0 0 1px;
+  margin: 0;
+  overflow: visible;
+  padding: .5em 1em;
+}
+
+@-webkit-keyframes flicker {
+  0% {
+    -webkit-box-shadow: 0 0 5px rgba(0, 255, 0, 0.2);
+            box-shadow: 0 0 5px rgba(0, 255, 0, 0.2);
+  }
+
+  100% {
+    -webkit-box-shadow: 0 0 20px rgba(0, 255, 0, 0.6);
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.6);
+  }
+}
+
+@keyframes flicker {
+  0% {
+    -webkit-box-shadow: 0 0 5px rgba(0, 255, 0, 0.2);
+            box-shadow: 0 0 5px rgba(0, 255, 0, 0.2);
+  }
+
+  100% {
+    -webkit-box-shadow: 0 0 20px rgba(0, 255, 0, 0.6);
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.6);
+  }
+}
+
+.notifications-index-page .message-wrap {
+  padding: 1rem;
+  background-color: #fff;
+  -webkit-box-shadow: 2px 2px 10px #eee;
+          box-shadow: 2px 2px 10px #eee;
+}
+
+.notifications-index-page .notification-list {
+  margin-top: 1rem;
+}
+
+.notifications-index-page .notification-list .media {
+  padding: .4rem;
+  border-top: 1px solid #eee;
+  position: relative;
+}
+
+.notifications-index-page .notification-list .media a {
+  color: #657786;
+  font-weight: bold;
+}
+
+.notifications-index-page .notification-list .media .media-left {
+  min-width: 4rem;
+  max-width: 10%;
+}
+
+.notifications-index-page .notification-list .media .media-left .avatar-box {
+  margin-top: .6rem;
+}
+
+.notifications-index-page .notification-list .media .card {
+  width: 100%;
+  border: 0;
+  margin: 0;
+}
+
+.notifications-index-page .notification-list .media .card .card-body {
+  padding: .5rem;
+}
+
+.notifications-index-page .notification-list .media .delete-reply {
+  position: absolute;
+  top: .8rem;
+  right: .8rem;
+}
+

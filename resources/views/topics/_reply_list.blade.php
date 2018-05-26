@@ -6,7 +6,7 @@
     @endif
     <ul class="list-unstyled">
         @foreach ($replies as $index => $reply)
-        <li class="media" name="reply{{ $reply->id }}" id="reply{{ $reply->id }}">
+        <li class="media reply-item" name="reply{{ $reply->id }}" id="reply{{ $reply->id }}">
             <div class="media-left text-center">
                 <div class="avatar-box">
                     <a class="" href="{{ route('users.show', [$reply->user_id]) }}">
@@ -22,7 +22,7 @@
                             <span> • </span>
                             <span class="text-muted" title="{{ $reply->created_at }}">{{ $reply->created_at->diffForHumans() }}</span>
                         </div>
-                        <p class="card-text">
+                        <p class="card-text reply-content">
                             {!! $reply->content !!}
                         </p>
                         <div class="links">

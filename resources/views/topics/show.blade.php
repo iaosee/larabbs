@@ -78,12 +78,17 @@
 <script>
 
     $(function () {
-        hljs.initHighlightingOnLoad();
-    });
 
-    var simplemde = new SimpleMDE({
-        element: document.querySelector('#editor'),
-        toolbar: false
+        hljs.initHighlightingOnLoad();
+
+        var simplemde = new SimpleMDE({
+            element: document.querySelector('#editor'),
+            toolbar: false
+        });
+
+
+        $(location.hash).addClass('flicker');
+
     });
 
 </script>
