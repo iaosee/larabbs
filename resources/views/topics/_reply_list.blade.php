@@ -22,7 +22,7 @@
                             <span> • </span>
                             <span class="text-muted" title="{{ $reply->created_at }}">{{ $reply->created_at->diffForHumans() }}</span>
                         </div>
-                        <p class="card-text reply-content">
+                        <p class="card-text mt-2 reply-content">
                             {!! $reply->content !!}
                         </p>
                         <div class="links">

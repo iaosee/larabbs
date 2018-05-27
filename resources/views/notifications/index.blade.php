@@ -30,7 +30,12 @@
                             @foreach ($notifications as $notification)
                                 @include('notifications.types._' . snake_case(class_basename($notification->type)))
                             @endforeach
-                            {!! $notifications->render() !!}
+
+                            <div class="page clearfix">
+                                <div class="page-wrap pull-right">
+                                    {{ $notifications->render() }}
+                                </div>
+                            </div>
                         </div>
                         @else
                         <div class="empty-block">没有消息通知！</div>

@@ -20,7 +20,7 @@
                     </span>
                 </div>
                 <p class="card-text mt-2">
-                    {!! str_limit(strip_tags($notification->data['reply_content']), 150, '...') !!}
+                    {!! str_limit(strip_tags($notification->data['reply_content']), 280, '...') !!}
                 </p>
             </div>
         </div>
