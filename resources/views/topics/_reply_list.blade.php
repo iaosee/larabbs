@@ -25,10 +25,21 @@
                         <p class="card-text mt-2 reply-content">
                             {!! $reply->content !!}
                         </p>
-                        <div class="links">
-                            <a href="#" class="card-link" title="">点赞(10)</a>
-                            <span> • </span>
-                            <a href="#" class="card-link" title="">删除</a>
+                        <div class="links text-right">
+                            <a href="" class="card-link" title="">
+                                <button type="submit" class="btn btn-default btn-sm">
+                                    <i class="icon iconfont icon-good"></i>
+                                </button>
+                            </a>
+                            @can('destroy', $reply)
+                            <form class="d-inline" action="{{ route('replies.destroy', $reply->id) }}" method="post">
+                                {{ csrf_field() }}
+                                {{ method_field('DELETE') }}
+                                <button type="submit" class="btn btn-default btn-sm">
+                                    <i class="icon iconfont icon-delete"></i>
+                                </button>
+                            </form>
+                            @endcan
                         </div>
                     </div>
                 </div>

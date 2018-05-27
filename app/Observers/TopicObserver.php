@@ -43,4 +43,9 @@ class TopicObserver
             dispatch(new TranslateSlug($topic));
         }
     }
+
+    public function deleted(Topic $topic)
+    {
+        \Db::table('topic')->where('topid_id', $topic->id)->delete();
+    }
 }

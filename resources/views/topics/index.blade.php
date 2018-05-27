@@ -29,7 +29,7 @@
         <div class="col-md-3">
             <aside class="aside">
                 <div class="">
-                    <a href="{{ route('topics.create') }}" class="btn btn-block btn-success">发布话题</a>
+                    <a href="{{ route('topics.create') }}" class="btn btn-block btn-success"><i class="icon iconfont icon-survey1"></i>发布话题</a>
                 </div>
                 <!-- <div class="card">
                     <div class="card-body">

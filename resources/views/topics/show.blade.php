@@ -44,12 +44,12 @@
                 <div class="card aside">
                     <div class="buttons text-center">
                         <a href="{{route('topics.edit', $topic->id)}}" class="d-inline">
-                            <button type="button" class="btn btn-primary">编辑</button>
+                            <button type="button" class="btn btn-sm btn-primary"><i class="icon iconfont icon-edit"></i> 编辑</button>
                         </a>
                         <form action="{{ route('topics.destroy', $topic->id) }}" method="post" class="d-inline">
                             {{ csrf_field() }}
                             {{ method_field('DELETE') }}
-                            <button type="submit" class="btn btn-danger">删除</button>
+                            <button type="submit" class="btn btn-sm btn-danger"><i class="icon iconfont icon-delete"></i> 删除</button>
                         </form>
                     </div>
                 </div>
@@ -59,8 +59,8 @@
                     <div class="card-body">
                         @include('users._user_heading', [ 'user' => $topic->user])
                         <div class="buttons text-center">
-                            <button type="button" class="btn btn-sm btn-outline-primary">关注</button>
-                            <button type="button" class="btn btn-sm btn-outline-secondary">私信</button>
+                            <button type="button" class="btn btn-sm btn-outline-primary"><i class="icon iconfont icon-favorites"></i> 关注</button>
+                            <button type="button" class="btn btn-sm btn-outline-info"><i class="icon iconfont icon-email"></i> 私信</button>
                         </div>
                     </div>
                 </div>

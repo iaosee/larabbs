@@ -19,7 +19,7 @@
                 @if( Auth::check() )
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('topics.create') }}">创建话题</a>
+                        <a class="nav-link" href="{{ route('topics.create') }}" data-toggle="tooltip" data-placement="top" title="发布文章"> <i class="icon iconfont icon-survey1"></i></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('notifications.index') }}">
