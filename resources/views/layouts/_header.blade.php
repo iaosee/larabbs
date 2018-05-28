@@ -19,11 +19,12 @@
                 @if( Auth::check() )
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('topics.create') }}" data-toggle="tooltip" data-placement="top" title="发布文章"> <i class="icon iconfont icon-survey1"></i></a>
+                        <a class="nav-link" href="{{ route('topics.create') }}" data-toggle="tooltip" data-placement="top" title="发布文章"><i class="icon iconfont icon-survey1"></i></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('notifications.index') }}">
-                            <span class="badge badge-pill badge-{{ Auth::user()->notification_count > 0 ? 'success' : 'secondary' }} "  data-toggle="tooltip" data-placement="top" title="消息提醒">{{ Auth::user()->notification_count }}</span>
+                        <a class="nav-link" href="{{ route('notifications.index') }}" data-toggle="tooltip" data-placement="top" title="消息提醒">
+                            <i class="icon iconfont icon-remind1"></i>
+                            <span class="badge badge-pill notify-badge badge-{{ Auth::user()->notification_count > 0 ? 'success' : 'secondary' }} ">{{ Auth::user()->notification_count }}</span>
                         </a>
                     </li>
                     <li class="nav-item dropdown">
@@ -32,8 +33,11 @@
                             {{ Auth::user()->name }}
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="{{ route('users.show', Auth::id()) }}">个人中心</a>
-                            <a class="dropdown-item" href="{{ route('users.edit', Auth::id()) }}">编辑资料</a>
+                            <a class="dropdown-item" href="{{ route('users.show', Auth::id()) }}"><i class="icon iconfont icon-bussinessman"></i> 个人中心</a>
+                            <a class="dropdown-item" href="{{ route('users.edit', Auth::id()) }}"><i class="icon iconfont icon-edit"></i> 编辑资料</a>
+                            @can('manage_contents')
+                            <a class="dropdown-item" href="{{ url(config('administrator.uri')) }}"><i class="icon iconfont icon-set"></i> 管理后台</a>
+                            @endcan
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="#">
                                 <form method="POST" action="{{ route('logout') }}">

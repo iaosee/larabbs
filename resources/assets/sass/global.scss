@@ -50,6 +50,7 @@ a.link-normal {
                 .nav-link {
                     padding: 1rem 1.25rem;
                     transition: all .5s;
+                    position: relative;
                     &.username {
                         position: relative;
                         padding-left: 2rem;
@@ -60,6 +61,14 @@ a.link-normal {
                     }
                     &:hover {
                         background-color: rgba($color: $parmary-color, $alpha: 0.2);
+                    }
+                    .notify-badge {
+                        font-size: .8rem;
+                        padding-left: .3rem;
+                        padding-right: .3rem;
+                        position: absolute;
+                        top: .3rem;
+                        right: .3rem;
                     }
                 }
                 &.active {

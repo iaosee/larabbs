@@ -10821,6 +10821,7 @@ a.link-normal {
   padding: 1rem 1.25rem;
   -webkit-transition: all .5s;
   transition: all .5s;
+  position: relative;
 }
 
 .wrap-header .navbar .navbar-nav .nav-item .nav-link.username {
@@ -10835,6 +10836,15 @@ a.link-normal {
 
 .wrap-header .navbar .navbar-nav .nav-item .nav-link:hover {
   background-color: rgba(0, 181, 173, 0.2);
+}
+
+.wrap-header .navbar .navbar-nav .nav-item .nav-link .notify-badge {
+  font-size: .8rem;
+  padding-left: .3rem;
+  padding-right: .3rem;
+  position: absolute;
+  top: .3rem;
+  right: .3rem;
 }
 
 .wrap-header .navbar .navbar-nav .nav-item.active .nav-link {
