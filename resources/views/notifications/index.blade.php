@@ -38,7 +38,7 @@
                             </div>
                         </div>
                         @else
-                        <div class="empty-block">没有消息通知！</div>
+                        <div class="empty-block text-center">没有消息通知！</div>
                         @endif
                     </div>
                 </div>

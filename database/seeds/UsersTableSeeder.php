@@ -38,5 +38,10 @@ class UsersTableSeeder extends Seeder
         $user->password = bcrypt('xiaofeng');
         $user->avatar = 'http://www.gravatar.com/avatar/85839a4b2ac579dff0c5f618ed37431b?s=120';
         $user->save();
+
+
+        $user->assignRole('Founder');
+        $user = User::find(2);
+        $user->assignRole('Maintainer');
     }
 }
