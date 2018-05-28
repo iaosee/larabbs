@@ -61,4 +61,14 @@ class User extends Authenticatable
         $this->save();
         $this->unreadNotifications->markAsRead();
     }
+
+    public function getAvatar()
+    {
+        $reg = "/(https?|ftp):\/\/[-A-Za-z0-9+&@#\/%?=~_|!:,.;]+[-A-Za-z0-9+&@#\/%=~_|]/";
+        if( preg_match($reg, $this->avatar, $match) ) {
+            return $this->avatar;
+        }
+
+        return env('APP_URL') . $this->avatar;
+    }
 }

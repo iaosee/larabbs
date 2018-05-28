@@ -32,9 +32,9 @@
                     @endif -->
                     <p><small><a tabindex="-1" href="{{ route('password.request') }}">忘记密码?</a></small></p>
                 </div>
-                <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="remember-check">
-                    <label class="form-check-label" for="remember-check" name="remember" {{ old('remember') ? 'checked' : '' }}>记住登录状态</label>
+                <div class="form-check custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="remember-check">
+                    <label class="custom-control-label" for="remember-check" name="remember" {{ old('remember') ? 'checked' : '' }}>记住登录状态</label>
                 </div>
                 <div class="form-group">
                     <button  type="submit" class="btn btn-primary btn-lg btn-block form-submit-button">登录</button>

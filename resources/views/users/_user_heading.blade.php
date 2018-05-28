@@ -1,6 +1,6 @@
                         <div class="text-center user-heading">
                             <div class="avatar-wrap">
-                                <a href="{{ route('users.show', $user) }}"><img class="rounded-circle img-responsive user-avatar" src="{{ config('app.url') . $user->avatar }}" /></a>
+                                <a href="{{ route('users.show', $user) }}"><img class="rounded-circle img-responsive user-avatar" src="{{ $user->getAvatar() }}" /></a>
                             </div>
                             <h1 class="h4">
                                 <small class="text-info">@</small>

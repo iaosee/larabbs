@@ -10,7 +10,7 @@
             <div class="media-left text-center">
                 <div class="avatar-box">
                     <a class="" href="{{ route('users.show', [$reply->user_id]) }}">
-                        <img class="rounded-circle img-responsive user-avatar" width="50" height="50" class="mr-3 media-object img-thumbnail" src="{{ $reply->user->avatar }}" alt="{{ $reply->user->name }}">
+                        <img class="rounded-circle img-responsive user-avatar" width="50" height="50" class="mr-3 media-object img-thumbnail" src="{{ $reply->user->getAvatar() }}" alt="{{ $reply->user->name }}">
                     </a>
                 </div>
             </div>
@@ -26,12 +26,13 @@
                             {!! $reply->content !!}
                         </p>
                         <div class="links text-right">
-                            <a href="" class="card-link" title="">
+                            @can('destroy', $reply)
+                            <!-- <form class="d-inline" > -->
+                                {{ csrf_field() }}
                                 <button type="submit" class="btn btn-default btn-sm">
                                     <i class="icon iconfont icon-good"></i>
                                 </button>
-                            </a>
-                            @can('destroy', $reply)
+                            <!-- </form> -->
                             <form class="d-inline" action="{{ route('replies.destroy', $reply->id) }}" method="post">
                                 {{ csrf_field() }}
                                 {{ method_field('DELETE') }}

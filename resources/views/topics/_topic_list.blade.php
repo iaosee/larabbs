@@ -4,7 +4,7 @@
                     <li class="media mb-2">
                         <div class="media-left">
                             <div class="user-avatar">
-                                <a href="{{ route('users.show', [$topic->user->id]) }}"><img width="60" height="60" class="mr-3 media-object img-thumbnail" src="{{ $topic->user->avatar }}" alt="{{ $topic->user->name }}"></a>
+                                <a href="{{ route('users.show', [$topic->user->id]) }}"><img width="60" height="60" class="mr-3 media-object img-thumbnail" src="{{ $topic->user->getAvatar() }}" alt="{{ $topic->user->name }}"></a>
                             </div>
                             <a href="{{ route('users.show', [$topic->user->id]) }}">{{ $topic->user->name }}</a>
                         </div>

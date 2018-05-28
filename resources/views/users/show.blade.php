@@ -7,7 +7,7 @@
         <!-- <div class="user-intro">
             <div class="card">
                 <div class="avatar-wrap">
-                    <img class="rounded-circle avatar img-responsive" src="{{ config('app.url') . $user->avatar }}" alt="user avatar">
+                    <img class="rounded-circle avatar img-responsive" src="{{ $user->getAvatar() }}" alt="user avatar">
                 </div>
                 <div class="media-body">
                     <h2> <small>@</small> {{ $user->name }}</h2>
