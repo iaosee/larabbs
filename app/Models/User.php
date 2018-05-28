@@ -65,8 +65,13 @@ class User extends Authenticatable
         $this->unreadNotifications->markAsRead();
     }
 
-    public function getAvatar()
+    public function getAvatar($size = 120)
     {
+        if( $this->avatar === null ) {
+            $hash = md5(strtolower(trim($this->attributes['email'])));
+            return "http://www.gravatar.com/avatar/$hash?s=$size";
+        }
+
         $reg = "/(https?|ftp):\/\/[-A-Za-z0-9+&@#\/%?=~_|!:,.;]+[-A-Za-z0-9+&@#\/%=~_|]/";
         if( preg_match($reg, $this->avatar, $match) ) {
             return $this->avatar;

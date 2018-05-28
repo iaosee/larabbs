@@ -2,11 +2,15 @@
                 <ul class="list-unstyled">
                     @foreach( $topics as $topic )
                     <li class="media mb-2">
-                        <div class="media-left">
+                        <div class="media-left text-center">
                             <div class="user-avatar">
-                                <a href="{{ route('users.show', [$topic->user->id]) }}"><img width="60" height="60" class="mr-3 media-object img-thumbnail" src="{{ $topic->user->getAvatar() }}" alt="{{ $topic->user->name }}"></a>
+                                <a href="{{ route('users.show', [$topic->user->id]) }}">
+                                    <img width="60" height="60" class="media-object img-thumbnail rounded-circle img-responsive user-avatar" src="{{ $topic->user->getAvatar() }}" alt="{{ $topic->user->name }}">
+                                </a>
                             </div>
-                            <a href="{{ route('users.show', [$topic->user->id]) }}">{{ $topic->user->name }}</a>
+                            <p class="">
+                                <a href="{{ route('users.show', [$topic->user->id]) }}">{{ $topic->user->name }}</a>
+                            </p>
                         </div>
                         <div class="card">
                             <div class="media-body">

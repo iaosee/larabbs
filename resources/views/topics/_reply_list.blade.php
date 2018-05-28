@@ -26,17 +26,17 @@
                             {!! $reply->content !!}
                         </p>
                         <div class="links text-right">
-                            @can('destroy', $reply)
                             <!-- <form class="d-inline" > -->
                                 {{ csrf_field() }}
-                                <button type="submit" class="btn btn-default btn-sm">
+                                <button type="submit" class="btn btn-default btn-sm ">
                                     <i class="icon iconfont icon-good"></i>
                                 </button>
                             <!-- </form> -->
+                            @can('destroy', $reply)
                             <form class="d-inline" action="{{ route('replies.destroy', $reply->id) }}" method="post">
                                 {{ csrf_field() }}
                                 {{ method_field('DELETE') }}
-                                <button type="submit" class="btn btn-default btn-sm">
+                                <button type="submit" class="btn btn-default btn-sm text-danger">
                                     <i class="icon iconfont icon-delete"></i>
                                 </button>
                             </form>
