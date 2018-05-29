@@ -24,7 +24,9 @@ return [
 
         // 列的标示，这是一个最小化『列』信息配置的例子，读取的是模型里对应
         // 的属性的值，如 $model->id
-        'id',
+        'id' => [
+            'title' => 'ID',
+        ],
 
         'avatar' => [
             // 数据表格里列的名称，默认会使用『列标识』
@@ -43,7 +45,7 @@ return [
             'title'    => '用户名',
             'sortable' => false,
             'output' => function ($name, $model) {
-                return '<a href="/users/'.$model->id.'" target=_blank>'.$name.'</a>';
+                return '<a href="/users/'.$model->id.'" target="_blank">'.$name.'</a>';
             },
         ],
 
@@ -105,4 +107,5 @@ return [
             'title' => '邮箱',
         ],
     ],
+
 ];
