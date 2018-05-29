@@ -29,14 +29,14 @@
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle username" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <img width="20" height="20" class="rounded-circle avatar img-responsive" src="{{ Auth::user()->getAvatar() }}" alt="user avatar" />
+                            <img width="20" height="20" class="rounded-circle avatar img-responsive" src="{{ Auth::user()->avatar }}" alt="user avatar" />
                             {{ Auth::user()->name }}
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="{{ route('users.show', Auth::id()) }}"><i class="icon iconfont icon-bussinessman"></i> 个人中心</a>
                             <a class="dropdown-item" href="{{ route('users.edit', Auth::id()) }}"><i class="icon iconfont icon-edit"></i> 编辑资料</a>
                             @can('manage_contents')
-                            <a class="dropdown-item" href="{{ url(config('administrator.uri')) }}"><i class="icon iconfont icon-set"></i> 管理后台</a>
+                            <a class="dropdown-item" href="{{ url(config('administrator.uri')) }}" target="_blank"><i class="icon iconfont icon-set"></i> 管理后台</a>
                             @endcan
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="#">

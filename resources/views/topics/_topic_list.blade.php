@@ -5,7 +5,7 @@
                         <div class="media-left text-center">
                             <div class="user-avatar">
                                 <a href="{{ route('users.show', [$topic->user->id]) }}">
-                                    <img width="60" height="60" class="media-object img-thumbnail rounded-circle img-responsive user-avatar" src="{{ $topic->user->getAvatar() }}" alt="{{ $topic->user->name }}">
+                                    <img width="60" height="60" class="media-object img-thumbnail rounded-circle img-responsive user-avatar" src="{{ $topic->user->avatar }}" alt="{{ $topic->user->name }}">
                                 </a>
                             </div>
                             <p class="">

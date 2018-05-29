@@ -10,7 +10,7 @@
             <div class="media-left text-center">
                 <div class="avatar-box">
                     <a class="" href="{{ route('users.show', [$reply->user_id]) }}">
-                        <img class="rounded-circle img-responsive user-avatar" width="50" height="50" class="mr-3 media-object img-thumbnail" src="{{ $reply->user->getAvatar() }}" alt="{{ $reply->user->name }}">
+                        <img class="rounded-circle img-responsive user-avatar" width="50" height="50" class="mr-3 media-object img-thumbnail" src="{{ $reply->user->avatar }}" alt="{{ $reply->user->name }}">
                     </a>
                 </div>
             </div>
