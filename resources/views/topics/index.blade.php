@@ -45,6 +45,20 @@
                     @endforeach
                 </ul>
             </aside>
+            @if (count($links))
+            <aside class="mt-4 aside">
+                <div class="h6 text-center">资源推荐</div>
+                <ul class="list-group list-group-flush">
+                    @foreach ($links as $link)
+                    <li class="list-group-item">
+                        <a class="" href="{{ $link->link }}">
+                            <span>{{ $link->title }}</span>
+                        </a>
+                    </li>
+                    @endforeach
+                </ul>
+            </aside>
+            @endif
         </div>
     </div>
 </section>
