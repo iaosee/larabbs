@@ -31,15 +31,19 @@
                 <div class="">
                     <a href="{{ route('topics.create') }}" class="btn btn-block btn-success"><i class="icon iconfont icon-survey1"></i>发布话题</a>
                 </div>
-                <!-- <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="card-link">Card link</a>
-                        <a href="#" class="card-link">Another link</a>
-                    </div>
-                </div> -->
+            </aside>
+            <aside class="mt-4 aside">
+                <div class="h6 text-center">活跃用户</div>
+                <ul class="list-group list-group-flush">
+                    @foreach ($active_users as $active_user)
+                    <li class="list-group-item">
+                        <a class="" href="{{ route('users.show', $active_user->id) }}">
+                            <img class="rounded-circle img-responsive user-avatar" src="{{ $active_user->avatar }}" width="25px" height="25px">
+                            <span>{{ $active_user->name }}</span>
+                        </a>
+                    </li>
+                    @endforeach
+                </ul>
             </aside>
         </div>
     </div>
