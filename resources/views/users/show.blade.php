@@ -30,6 +30,8 @@
                             <hr>
                             <h4 class="h6 text-muted"><strong>加入于</strong></h4>
                             <p>{{ $user->created_at->diffForHumans() }}</p>
+                            <h4 class="h6 text-muted"><strong>最后活跃</strong></h4>
+                            <p>{{ $user->last_actived_at->diffForHumans() }}</p>
                         </div>
                     </div>
                 </aside>
