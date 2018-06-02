@@ -17,7 +17,7 @@ Route::get('/', function () {
 });
 */
 
-Route::get('/', 'PagesController@root')->name('root');
+Route::get('/', 'TopicsController@index')->name('root');
 
 /*
 // make:auth  自动 generate, 相当于一下几项
