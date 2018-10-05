@@ -38,7 +38,7 @@ return [
         'connection' => null,   // Leave null for default connection (Redis/PDO)
         'provider'   => '' // Instance of StorageInterface for custom driver
     ],
-
+    
     /*
      |--------------------------------------------------------------------------
      | Vendors
