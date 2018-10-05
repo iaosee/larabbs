@@ -27,6 +27,7 @@ class Kernel extends HttpKernel
      * @var array
      */
     protected $middlewareGroups = [
+        // Web 中间件组，应用于 routes/web.php 路由文件
         'web' => [
             \App\Http\Middleware\EncryptCookies::class,
             \Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse::class,
@@ -36,10 +37,10 @@ class Kernel extends HttpKernel
             \App\Http\Middleware\VerifyCsrfToken::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
 
-
+            // 自定义中间件 —— 记录用户最后活跃时间
             \App\Http\Middleware\RecordLastActivedTime::class,
         ],
-
+        // API 中间件组，应用于 routes/api.php 路由文件
         'api' => [
             'throttle:60,1',
             'bindings',
