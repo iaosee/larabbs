@@ -32,12 +32,20 @@ $api->version('v1', [
     'namespace' => 'App\Http\Controllers\Api'
 ], function($api) {
 
+    // 获取API版本
     $api->get('version', function() {
         return response(['version' => 'this is version v1']);
     });
 
+    // 发送短信验证码
     $api->post('verificationCodes', 'VerificationCodesController@store')
         ->name('api.verificationCodes.store');
+
+    // 用户注册
+    $api->post('users', 'UsersController@store')
+        ->name('api.users.store');
+
+
 });
 
 $api->version('v2', function($api) {

@@ -26,13 +26,13 @@ class VerificationCodesController extends Controller
             }
         }
 
-        $key = 'verificationCode_'.str_random(15);
+        $key = 'verificationCode_' . str_random(15);
         $expiredAt = now()->addMinutes(10);
         // 缓存验证码 10分钟过期。
         \Cache::put($key, ['phone' => $phone, 'code' => $code], $expiredAt);
 
         return $this->response->array([
-            // 'code' => $code,
+            'code' => $code,
             'key' => $key,
             'expired_at' => $expiredAt->toDateTimeString(),
             'message' => '短信发送成功',
