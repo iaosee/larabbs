@@ -21,7 +21,6 @@ class AuthorizationsController extends Controller
     // 普通登录
     public function store(AuthorizationRequest $request)
     {
-        return $this->response->noContent();
 
         $username = $request->username;
 
@@ -92,13 +91,18 @@ class AuthorizationsController extends Controller
     public function update()
     {
         $token = \Auth::guard('api')->refresh();
-        return $this->respondWithToken($token);
+        return $this->response->array([
+            'message' => 'Token 刷新成功',
+            'token' => $token
+        ]);
     }
 
     public function destroy()
     {
         \Auth::guard('api')->logout();
-        return $this->response->noContent();
+        return $this->response->array([
+            'message' => 'Token 删除成功',
+        ]);
     }
 
 }
