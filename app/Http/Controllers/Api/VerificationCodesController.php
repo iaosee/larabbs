@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Api;
 use Overtrue\EasySms\EasySms;
 use App\Http\Requests\Api\VerificationCodeRequest;
 
-// 继承的是 Api
+// 继承的是 API 下的 Controller
 class VerificationCodesController extends Controller
 {
     public function store(VerificationCodeRequest $request, EasySms $easySms)
