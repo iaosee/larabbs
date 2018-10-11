@@ -48,6 +48,10 @@ $api->version('v1', [
         $api->post('verificationCodes', 'VerificationCodesController@store')
             ->name('api.verificationCodes.store');
 
+        // 第三方登录
+        $api->post('socials/{social_type}/authorizations', 'AuthorizationsController@socialStore')
+            ->name('api.socials.authorizations.store');
+
         // 用户注册
         $api->post('users', 'UsersController@store')
             ->name('api.users.store');
@@ -61,7 +65,7 @@ $api->version('v1', [
 // 微信登录授权 API 
 https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx9c5af9f69a479e42&redirect_uri=http://larabbs.me&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect
 // 获取 access_token
-https://api.weixin.qq.com/sns/oauth2/access_token?appid=wx9c5af9f69a479e42&secret=0a7357d2d64c7cf7318b6533fd0c1732&code=021mvTam0wEt0k1KjMcm0wlvam0mvTaE&grant_type=authorization_code
+https://api.weixin.qq.com/sns/oauth2/access_token?appid=wx9c5af9f69a479e42&secret=0a7357d2d64c7cf7318b6533fd0c1732&code=011FdnC40w1VDK11FMF40flgC40FdnCe&grant_type=authorization_code
 // 通过 access_token获取个人信息
 https://api.weixin.qq.com/sns/userinfo?access_token=14_7ldaakR9ip09llIm4JgXv27QmdetFNjRraG1ySc56lLGDp71VTUXsFpdFAfiJuJI8qLbxsZE1prQ8PXQekecPA&openid=oZWeA1kh89fxklY12H57j0GNVy28&lang=zh_CN
 
