@@ -6,9 +6,13 @@ use Illuminate\Http\Request;
 use App\Http\Requests\Api\UserRequest;
 use App\Transformers\UserTransformer;
 use App\Models\User;
+use App\Models\Image;
 
 class UsersController extends Controller
 {
+    /**
+     * 用户注册
+     */
     public function store(UserRequest $request)
     {
         $verifyData = \Cache::get($request->verification_key);
@@ -39,9 +43,27 @@ class UsersController extends Controller
                     ])->setStatusCode(201);
     }
 
+    /** 
+     * 获取登录用户信息
+     */
     public function me()
     {
         return $this->response->item($this->user(), new UserTransformer());
+    }
+
+    public function update(UserRequest $request)
+    {
+        $user = $this->user();
+        $attributes = $request->only(['name', 'email', 'introduction']);
+        
+        if ($request->avatar_image_id) {
+            $image = Image::find($request->avatar_image_id);
+            $attributes['avatar'] = $image->path;
+        }
+
+        $user->update($attributes);
+        return $this->response->item($user, new UserTransformer());
+
     }
     
 }
