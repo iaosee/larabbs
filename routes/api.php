@@ -91,6 +91,11 @@ $API_V1 = function($api) {
 
             // 发布文章
             $api->post('topics', 'TopicsController@store')->name('api.topics.store');
+
+            // 修改文章
+            $api->patch('topics/{topic}', 'TopicsController@update')->name('api.topics.update');
+
+
         });
 
     });
@@ -99,7 +104,7 @@ $API_V1 = function($api) {
 
 $api->version('v1', [
     'namespace' => 'App\Http\Controllers\Api',
-    'middleware' => 'serializer:array',
+    'middleware' => ['serializer:array', 'bindings'],
 ], $API_V1);
 
 
