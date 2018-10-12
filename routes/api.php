@@ -28,10 +28,8 @@ $api = app('Dingo\Api\Routing\Router');
 });
  */
 
-$api->version('v1', [
-    'namespace' => 'App\Http\Controllers\Api',
-    'middleware' => 'serializer:array',
-], function($api) {
+
+$API_V1 = function($api) {
 
     // 获取API版本
     $api->get('version', function() {
@@ -53,17 +51,17 @@ $api->version('v1', [
         $api->post('verificationCodes', 'VerificationCodesController@store')
             ->name('api.verificationCodes.store');
 
-        // 第三方登录
-        $api->post('socials/{social_type}/authorizations', 'AuthorizationsController@socialStore')
-            ->name('api.socials.authorizations.store');
-            
+        // 用户注册
+        $api->post('users', 'UsersController@store')
+            ->name('api.users.store');
+
         // 用户登录
         $api->post('authorizations', 'AuthorizationsController@store')
             ->name('api.authorizations.store');
 
-        // 用户注册
-        $api->post('users', 'UsersController@store')
-            ->name('api.users.store');
+        // 第三方登录
+        $api->post('socials/{social_type}/authorizations', 'AuthorizationsController@socialStore')
+            ->name('api.socials.authorizations.store');
 
         // 刷新 token
         $api->put('authorizations/current', 'AuthorizationsController@update')
@@ -75,6 +73,8 @@ $api->version('v1', [
 
         // 获取分类
         $api->get('categories', 'CategoriesController@index')->name('api.categories.index');
+
+
 
         /* ********************************************************** */
 
@@ -88,12 +88,22 @@ $api->version('v1', [
             
             // 图片资源
             $api->post('images', 'ImagesController@store')->name('api.images.store');
-            
+
+            // 发布文章
+            $api->post('topics', 'TopicsController@store')->name('api.topics.store');
         });
 
     });
-/* 
+};
 
+
+$api->version('v1', [
+    'namespace' => 'App\Http\Controllers\Api',
+    'middleware' => 'serializer:array',
+], $API_V1);
+
+
+/* 
 // 微信登录授权 API 
 https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx9c5af9f69a479e42&redirect_uri=http://larabbs.me&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect
 // 获取 access_token
@@ -108,7 +118,6 @@ $driver = Socialite::driver('weixin');
 $driver->setOpenId($openID);
 $oauthUser = $driver->userFromToken($accessToken);
 */
-});
 
 $api->version('v2', function($api) {
     $api->get('version', function() {
