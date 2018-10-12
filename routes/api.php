@@ -74,7 +74,12 @@ $API_V1 = function($api) {
         // 获取分类
         $api->get('categories', 'CategoriesController@index')->name('api.categories.index');
 
+        // 文章列表
+        $api->get('topics', 'TopicsController@index')->name('api.topics.index');
 
+        // 某个用户的发布的文章
+        $api->get('users/{user}/topics', 'TopicsController@userIndex')
+            ->name('api.users.topics.index');
 
         /* ********************************************************** */
 
