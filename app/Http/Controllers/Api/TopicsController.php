@@ -47,6 +47,11 @@ class TopicsController extends Controller
                     ->setStatusCode(201);
     }
 
+    public function show(Topic $topic)
+    {
+        return $this->response->item($topic, new TopicTransformer());
+    }
+
     public function update(TopicRequest $request, Topic $topic)
     {
         $this->authorize('update', $topic);
