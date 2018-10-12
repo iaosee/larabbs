@@ -95,6 +95,8 @@ $API_V1 = function($api) {
             // 修改文章
             $api->patch('topics/{topic}', 'TopicsController@update')->name('api.topics.update');
 
+            // 删除文章
+            $api->delete('topics/{topic}', 'TopicsController@destroy')->name('api.topics.destroy');
 
         });
 
