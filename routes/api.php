@@ -106,6 +106,10 @@ $API_V1 = function($api) {
             // 删除文章
             $api->delete('topics/{topic}', 'TopicsController@destroy')->name('api.topics.destroy');
 
+            // 发布文章回复
+            $api->post('topics/{topic}/replies', 'RepliesController@store')->name('api.topics.replies.store');
+
+            // 
         });
 
     });
