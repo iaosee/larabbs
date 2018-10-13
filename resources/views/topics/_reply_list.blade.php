@@ -14,6 +14,7 @@
                     </a>
                 </div>
             </div>
+
             <div class="card">
                 <div class="media-body">
                     <div class="card-body">
@@ -22,9 +23,10 @@
                             <span> • </span>
                             <span class="text-muted" title="{{ $reply->created_at }}">{{ $reply->created_at->diffForHumans() }}</span>
                         </div>
-                        <p class="card-text mt-2 reply-content">
-                            {!! $reply->content !!}
-                        </p>
+                        <div class="card-text reply-content">
+                            <!-- {*!! $reply->content !!*} -->
+                            {!! $reply->content_parsed ?? $reply->content !!}
+                        </div>
                         <div class="links text-right">
                             <!-- <form class="d-inline" > -->
                                 {{ csrf_field() }}

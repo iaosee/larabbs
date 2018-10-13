@@ -146,10 +146,13 @@
     }
 }
 .reply-list {
-    margin-top: 2rem;
+    .title {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
     .media {
         padding: .4rem;
-        border-bottom: 1px solid #eee;
+        border-top: 1px solid #eee;
         position: relative;
         .info {
             a {

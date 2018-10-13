@@ -21,7 +21,7 @@
 
     .article-wrap {
         background-color: #fff;
-        padding: 2rem 2rem;
+        padding: 2rem 1.5rem;
         @include radius-block;
         @include shadow-block;
 
@@ -37,13 +37,17 @@
         @include margin-default;
         @include shadow-block;
 
-        .reply-item.flicker {
-            animation-name: flicker;
-            animation-duration: .5s;
-            animation-iteration-count: 3;
-            animation-timing-function: ease-out;
+        .reply-item {
+            &.flicker {
+                animation-name: flicker;
+                animation-duration: .5s;
+                animation-iteration-count: 3;
+                animation-timing-function: ease-out;
+            }
         }
         .reply-content {
+            // margin-left: 1rem;
+            padding: 1rem 0;
             @include markdown-html-style;
         }
     }

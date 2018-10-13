@@ -11044,13 +11044,14 @@ a.link-normal {
   min-height: 5rem;
 }
 
-.reply-list {
-  margin-top: 2rem;
+.reply-list .title {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .reply-list .media {
   padding: .4rem;
-  border-bottom: 1px solid #eee;
+  border-top: 1px solid #eee;
   position: relative;
 }
 
@@ -11127,7 +11128,7 @@ a.link-normal {
 
 .topics-show-page .article-wrap {
   background-color: #fff;
-  padding: 2rem 2rem;
+  padding: 2rem 1.5rem;
   border-radius: .2rem;
   -webkit-box-shadow: 2px 2px 10px #eee;
           box-shadow: 2px 2px 10px #eee;
@@ -11144,9 +11145,8 @@ a.link-normal {
 .topics-show-page .article-wrap .article-body h5,
 .topics-show-page .article-wrap .article-body h6 {
   word-break: break-all !important;
-  margin: 20px 0;
-  padding-bottom: .3em;
-  line-height: 1.2;
+  margin: 1.5rem 0;
+  margin-left: 1.2rem;
   text-align: left;
   font-weight: bold;
   color: #2c3e50;
@@ -11242,7 +11242,7 @@ a.link-normal {
           box-sizing: border-box !important;
   word-wrap: break-word !important;
   text-align: justify;
-  margin: 20px 0 !important;
+  margin: 1rem 0 !important;
 }
 
 .topics-show-page .article-wrap .article-body blockquote {
@@ -11344,6 +11344,10 @@ a.link-normal {
           animation-timing-function: ease-out;
 }
 
+.topics-show-page .article-reply .reply-content {
+  padding: 1rem 0;
+}
+
 .topics-show-page .article-reply .reply-content h1,
 .topics-show-page .article-reply .reply-content h2,
 .topics-show-page .article-reply .reply-content h3,
@@ -11351,9 +11355,8 @@ a.link-normal {
 .topics-show-page .article-reply .reply-content h5,
 .topics-show-page .article-reply .reply-content h6 {
   word-break: break-all !important;
-  margin: 20px 0;
-  padding-bottom: .3em;
-  line-height: 1.2;
+  margin: 1.5rem 0;
+  margin-left: 1.2rem;
   text-align: left;
   font-weight: bold;
   color: #2c3e50;
@@ -11449,7 +11452,7 @@ a.link-normal {
           box-sizing: border-box !important;
   word-wrap: break-word !important;
   text-align: justify;
-  margin: 20px 0 !important;
+  margin: 1rem 0 !important;
 }
 
 .topics-show-page .article-reply .reply-content blockquote {
