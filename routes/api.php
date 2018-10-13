@@ -72,43 +72,57 @@ $API_V1 = function($api) {
             ->name('api.authorizations.destroy');
 
         // 获取分类
-        $api->get('categories', 'CategoriesController@index')->name('api.categories.index');
+        $api->get('categories', 'CategoriesController@index')
+            ->name('api.categories.index');
 
         // 文章列表
-        $api->get('topics', 'TopicsController@index')->name('api.topics.index');
+        $api->get('topics', 'TopicsController@index')
+            ->name('api.topics.index');
 
         // 某个用户的发布的文章
         $api->get('users/{user}/topics', 'TopicsController@userIndex')
             ->name('api.users.topics.index');
 
         // 文章详情
-        $api->get('topics/{topic}', 'TopicsController@show')->name('api.topics.show');
+        $api->get('topics/{topic}', 'TopicsController@show')
+            ->name('api.topics.show');
 
         /* ********************************************************** */
 
         // 需要 token 验证的接口
         $api->group(['middleware' => 'api.auth'], function($api) {
             // 当前登录用户信息
-            $api->get('user', 'UsersController@me')->name('api.user.show');
+            $api->get('user', 'UsersController@me')
+                ->name('api.user.show');
 
             // 修改登录用户信息
-            $api->patch('user', 'UsersController@update')->name('api.user.update');
+            $api->patch('user', 'UsersController@update')
+                ->name('api.user.update');
             
             // 图片资源
-            $api->post('images', 'ImagesController@store')->name('api.images.store');
+            $api->post('images', 'ImagesController@store')
+                ->name('api.images.store');
 
             // 发布文章
-            $api->post('topics', 'TopicsController@store')->name('api.topics.store');
+            $api->post('topics', 'TopicsController@store')
+                ->name('api.topics.store');
 
             // 修改文章
-            $api->patch('topics/{topic}', 'TopicsController@update')->name('api.topics.update');
+            $api->patch('topics/{topic}', 'TopicsController@update')
+                ->name('api.topics.update');
 
             // 删除文章
-            $api->delete('topics/{topic}', 'TopicsController@destroy')->name('api.topics.destroy');
+            $api->delete('topics/{topic}', 'TopicsController@destroy')
+                ->name('api.topics.destroy');
 
             // 发布文章回复
-            $api->post('topics/{topic}/replies', 'RepliesController@store')->name('api.topics.replies.store');
+            $api->post('topics/{topic}/replies', 'RepliesController@store')
+                ->name('api.topics.replies.store');
 
+            // 删除文章回复
+            $api->delete('topics/{topic}/replies/{reply}', 'RepliesController@destroy')
+                ->name('api.topics.replies.destroy');
+            
             // 
         });
 
