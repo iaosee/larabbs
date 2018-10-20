@@ -10,6 +10,10 @@ body {
     background-color: rgba(245, 248, 250, 1); // font-family: Hiragino Sans GB, "Hiragino Sans GB", Helvetica, "Microsoft YaHei", Arial, sans-serif;
 }
 
+img {
+    max-width: 100%;
+}
+
 .wrap-app {
     height: 100%;
     display: flex;

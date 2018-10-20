@@ -25,7 +25,7 @@
                         <span>查看 {{$topic->view_count}}</span>
                     </div>
                 </div>
-                <article class="article-body">
+                <article class="article-body markdown-style">
                     {!! $topic->body_parsed !!}
                 </article>
                 <div class="article-footer">
@@ -77,9 +77,14 @@
 <script src="{{ asset('vendor/highlight/highlight.pack.js') }}"></script>
 <script>
 
-    $(function () {
+    $(document).ready(function () {
 
-        hljs.initHighlightingOnLoad();
+        // hljs.initHighlightingOnLoad();
+
+        // fix bug
+        $('pre code').each(function(i, block) {
+            hljs.highlightBlock(block);
+        });
 
         var simplemde = new SimpleMDE({
             element: document.querySelector('#editor'),

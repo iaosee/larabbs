@@ -23,7 +23,7 @@
                             <span> • </span>
                             <span class="text-muted" title="{{ $reply->created_at }}">{{ $reply->created_at->diffForHumans() }}</span>
                         </div>
-                        <div class="card-text reply-content">
+                        <div class="card-text reply-content markdown-style">
                             <!-- {*!! $reply->content !!*} -->
                             {!! $reply->content_parsed ?? $reply->content !!}
                         </div>

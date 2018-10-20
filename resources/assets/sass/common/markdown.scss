@@ -75,6 +75,11 @@
         text-decoration: underline;
     }
 
+    img {
+        max-width: 100%;
+        cursor: pointer;
+    }
+
     ul,
     ol {
         padding-left: 30px;
@@ -120,10 +125,10 @@
     pre {
         border-radius: 3px;
         word-wrap: break-word;
-        font-size: 13px;
+        font-size: 0.85rem;
         // background-color: #f8f8f8;
         background: #00171b;
-        padding: 12px 13px;
+        padding: 0.4rem 0.2rem;
     }
 
     code {
