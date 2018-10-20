@@ -31,4 +31,13 @@ class RepliesController extends Controller
 
         return $this->response->noContent();
     }
+
+    public function update(ReplyRequest $request, Topic $topic, Reply $reply)
+    {
+        $this->authorize('update', $reply);
+        $reply->update($request->all());
+
+        return $this->response->item($reply, new ReplyTransformer());        
+    }
+    
 }

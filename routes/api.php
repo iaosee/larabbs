@@ -122,7 +122,11 @@ $API_V1 = function($api) {
             // 删除文章回复
             $api->delete('topics/{topic}/replies/{reply}', 'RepliesController@destroy')
                 ->name('api.topics.replies.destroy');
-            
+
+            // 更新文章回复
+            $api->patch('topics/{topic}/replies/{reply}', 'RepliesController@update')
+                ->name('api.topics.replies.update');
+
             // 
         });
 
