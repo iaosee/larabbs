@@ -38,9 +38,11 @@
 
     h1::before,
     h2::before,
-    h3::before {
-        font-weight: 400;
+    h3::before,
+    h4::before,
+    h5::before {
         font-size: .8rem;
+        font-weight: 400;
         text-align: right;
         width: 3.5ch;
         padding-right: 1ch;
