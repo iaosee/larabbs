@@ -95,6 +95,10 @@ $API_V1 = function($api) {
         $api->get('users/{user}/replies', 'RepliesController@userIndex')
             ->name('api.users.replies.index');
 
+        // 资源推荐列表
+        $api->get('links', 'LinksController@index')
+            ->name('api.links.index');
+
         /* ********************************************************** */
 
         // 需要 token 验证的接口
