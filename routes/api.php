@@ -135,6 +135,10 @@ $API_V1 = function($api) {
             $api->patch('topics/{topic}/replies/{reply}', 'RepliesController@update')
                 ->name('api.topics.replies.update');
 
+            // 通知列表
+            $api->get('user/notifications', 'NotificationsController@index')
+                ->name('api.user.notifications.index');
+
         });
 
     });
