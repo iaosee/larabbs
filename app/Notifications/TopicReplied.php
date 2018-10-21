@@ -47,7 +47,7 @@ class TopicReplied extends Notification implements ShouldQueue
 
         return [
             'reply_id' => $this->reply->id,
-            'reply_content' => $this->reply->content,
+            'reply_content' => $this->reply->content_parsed ?? $this->reply->content,
             'user_id' => $this->reply->user->id,
             'user_name' => $this->reply->user->name,
             'user_avatar' => $this->reply->user->avatar,
@@ -70,7 +70,7 @@ class TopicReplied extends Notification implements ShouldQueue
 
         return (new MailMessage)
                     ->line('你的话题有新回复: ')
-                    ->line($this->reply->content)
+                    ->line($this->reply->content_parsed ?? $this->reply->content)
                     ->action('查看回复', $url)
                     ->line('感谢使用本应用, 如果不想接受邮件通知, 请到个人中心关闭 !');
     }

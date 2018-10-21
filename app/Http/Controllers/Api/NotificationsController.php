@@ -13,4 +13,14 @@ class NotificationsController extends Controller
 
         return $this->response->paginator($notifications, new NotificationTransformer());
     }
+
+    public function stats()
+    {
+        return $this->response->array([
+            'status_textss' => '未读',
+            'unread_count' => $this->user()->notification_count,
+        ]);
+    }
+
+    
 }
