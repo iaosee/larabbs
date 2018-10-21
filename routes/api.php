@@ -95,9 +95,14 @@ $API_V1 = function($api) {
         $api->get('users/{user}/replies', 'RepliesController@userIndex')
             ->name('api.users.replies.index');
 
-        // 资源推荐列表
+        // 获取资源推荐列表
         $api->get('links', 'LinksController@index')
             ->name('api.links.index');
+
+        // 获取活跃用户列表
+        $api->get('actived/users', 'UsersController@activedIndex')
+            ->name('api.actived.users.index');
+
 
         /* ********************************************************** */
 
