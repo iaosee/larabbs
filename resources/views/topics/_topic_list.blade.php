@@ -20,7 +20,7 @@
                                         <span class="badge badge-info badge-pill pull-right">{{ $topic->reply_count }}</span>
                                     </h5>
                                     <p class="card-text">
-                                        {{ $topic->title }}
+                                        {{-- $topic->title --}}
                                         {{ str_limit(strip_tags($topic->body_parsed), 300, '...') }}
                                     </p>
                                     <div class="links text-right">
