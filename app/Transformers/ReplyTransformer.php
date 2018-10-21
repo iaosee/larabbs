@@ -15,7 +15,8 @@ class ReplyTransformer extends TransformerAbstract
             'id' => $reply->id,
             'user_id' => (int) $reply->user_id,
             'topic_id' => (int) $reply->topic_id,
-            'content' => $reply->content_parsed ?? $reply->content,
+            'content' => $reply->content,
+            'content_parsed' => $reply->content_parsed,
             'created_at' => $reply->created_at->toDateTimeString(),
             'updated_at' => $reply->updated_at->toDateTimeString(),
         ];
