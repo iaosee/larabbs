@@ -15,6 +15,7 @@ class TopicTransformer extends TransformerAbstract
             'id' => $topic->id,
             'title' => $topic->title,
             'body' => $topic->body,
+            'body_parsed' => $topic->body_parsed,
             'user_id' => (int) $topic->user_id,
             'category_id' => (int) $topic->category_id,
             'reply_count' => (int) $topic->reply_count,

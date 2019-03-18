@@ -38,9 +38,11 @@
 
     h1::before,
     h2::before,
-    h3::before {
-        font-weight: 400;
+    h3::before,
+    h4::before,
+    h5::before {
         font-size: .8rem;
+        font-weight: 400;
         text-align: right;
         width: 3.5ch;
         padding-right: 1ch;
@@ -73,6 +75,11 @@
 
     a:hover {
         text-decoration: underline;
+    }
+
+    img {
+        max-width: 100%;
+        cursor: pointer;
     }
 
     ul,
@@ -120,10 +127,10 @@
     pre {
         border-radius: 3px;
         word-wrap: break-word;
-        font-size: 13px;
+        font-size: 0.85rem;
         // background-color: #f8f8f8;
         background: #00171b;
-        padding: 12px 13px;
+        padding: 0.4rem 0.2rem;
     }
 
     code {

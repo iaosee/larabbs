@@ -1,5 +1,9 @@
 @import "../common/markdown";
 
+.markdown-style {
+    @include markdown-html-style;
+}
+
 .topics-show-page {
 
     .card {
@@ -27,8 +31,9 @@
 
         .article-body {
             padding: 1rem .5rem;
-            @include markdown-html-style;
+            // font-size: 1rem;
         }
+
     }
 
     .article-reply {
@@ -47,8 +52,7 @@
         }
         .reply-content {
             // margin-left: 1rem;
-            padding: 1rem 0;
-            @include markdown-html-style;
+            padding: 0.85rem 0;
         }
     }
 

@@ -87,6 +87,23 @@ $API_V1 = function($api) {
         $api->get('topics/{topic}', 'TopicsController@show')
             ->name('api.topics.show');
 
+        // 文章评论列表
+        $api->get('topics/{topic}/replies', 'RepliesController@index')
+            ->name('api.topics.replies.index');
+
+        // 某个用户的回复列表
+        $api->get('users/{user}/replies', 'RepliesController@userIndex')
+            ->name('api.users.replies.index');
+
+        // 获取资源推荐列表
+        $api->get('links', 'LinksController@index')
+            ->name('api.links.index');
+
+        // 获取活跃用户列表
+        $api->get('actived/users', 'UsersController@activedIndex')
+            ->name('api.actived.users.index');
+
+
         /* ********************************************************** */
 
         // 需要 token 验证的接口
@@ -126,6 +143,22 @@ $API_V1 = function($api) {
             // 更新文章回复
             $api->patch('topics/{topic}/replies/{reply}', 'RepliesController@update')
                 ->name('api.topics.replies.update');
+
+            // 通知列表
+            $api->get('user/notifications', 'NotificationsController@index')
+                ->name('api.user.notifications.index');
+
+            // 未读通知统计
+            $api->get('user/notifications/stats', 'NotificationsController@stats')
+                ->name('api.user.notifications.stats');
+
+            // 标记消息通知为已读
+            $api->patch('user/read/notifications', 'NotificationsController@read')
+                ->name('api.user.notifications.read');
+            
+            // 当前登录用户权限
+            $api->get('user/permissions', 'PermissionsController@index')
+                ->name('api.user.permissions.index');
 
             // 
         });

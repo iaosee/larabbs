@@ -18,6 +18,7 @@ class ReplyObserver
 
     public function created(Reply $reply)
     {
+        // 创建回复，未读次数 +1
         $topic = $reply->topic;
         $topic->increment('reply_count', 1);
 
